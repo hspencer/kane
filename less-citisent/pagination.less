@@ -1,0 +1,23 @@
+// Pagination
+// -----------
+
+.pagination {
+
+  > li {
+    > a,
+    > span {
+      color: @pagination-color;
+      border-bottom: 3px solid @pagination-border-bottom;
+      .border-radius(0) !important;
+      &:hover{
+        color: @link-color;
+        border-bottom: 3px solid @pagination-border-bottom-hover;
+      }
+    }
+
+    > a.active,
+    > span.active{
+       border-bottom: 3px solid @gray;
+    }
+  }
+}

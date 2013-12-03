@@ -1,0 +1,327 @@
+
+// Gamificación
+// ------------
+
+.game{
+	background-color: @white;
+	border: 5px solid @gray-light;
+	margin-top: 16px;
+	.border-radius(5px);
+	
+	.game-header{
+		background-color: transparent;
+		border-bottom: 1px solid @gray-light;
+		margin-bottom: 16px;
+		position: relative;
+		padding-right: 110px;
+		.title{	
+			display: inline-block;
+
+			h3{
+				display: inline-block;
+				padding: 17px 2px 17px 17px;
+				font-size: 16px;
+				margin: 0;
+				font-family: SourceSansProSemibold;
+				
+				i {
+					padding: 0;
+					font-size: 16px;
+					color: fade(@gray, 60);
+					&:hover{
+						color: @link-color;
+					}
+				}
+			}
+			.popover-title{
+				display: block;
+				padding: 10px;
+				margin: 0;
+				text-align: left;
+			}
+
+			.popover-content{
+				font-family: SourceSansProLight;
+			}
+		}
+
+		.actions{
+			display: inline-block;
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 6px;
+			right: 6px;
+
+			a{
+				.btn;
+				.border-radius(20px);
+				width: 110px;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-family: SourceSansProSemibold;
+				text-align: left;
+				padding: 8px 28px 8px 12px;
+				right: 6px;
+			    top: 6px;
+			    vertical-align: middle;
+			    white-space: nowrap;
+
+				&.next{
+					background-color: @green;
+					color: @white;
+					text-shadow: 1px 1px 1px fade(@black, 20);
+					&:hover{
+						background-color: darken(@green, 5);
+						color: @white;
+					}
+				}
+
+				i{
+					display: block;
+					font-size: 16px;
+					position: absolute;
+					right: 11px;
+    				top: 10px;
+				}
+			}
+
+			
+			a:hover{
+				color: @black;
+			}
+		}
+	}
+
+	.game-content{
+		position: relative;
+		[class^="col-"],
+		[class*="col-"]{position: relative;}
+
+		p.quote{
+			padding: 70px;
+			font-family: SourceSansProExtraLight;
+			font-size: 38px;
+			line-height: 38px;
+		}
+
+	}
+
+	.game-buttons{
+
+		margin: 0 8px 24px 8px;
+
+		&:nth-child(2){
+			background-color: margin: 30px;
+		}
+
+		/*
+
+		[class^="btn-"],
+		[class*=" btn-"]{}
+
+		*/
+
+		.btn{
+			font-size: 24px;
+			font-family: SourceSansProLight;
+			//color: @contrast(@color1, black, white, [@threshold: 43%]);
+			color: @white;
+			padding: 9px 18px;
+			
+
+			.badge{
+				.box-shadow(1px 1px 2px fade(@black, 40) inset);
+				margin-left: 6px
+			}
+
+		}
+
+	}
+
+	.btn-positive{
+		.buttonBackground(lighten(@positive-color, 5), @positive-color);
+		&.active{
+			@shadow: 0 0 5px lighten(@positive-color, 30), inset 0 3px 8px rgba(0,0,0,0.4);
+			.buttonBackground(darken(@positive-color, 5), @positive-color);
+			.box-shadow(@shadow);
+		}
+	}
+	
+	.btn-neutral{
+		.buttonBackground(lighten(@neutral-color, 5), darken(@neutral-color, 5));
+		&.active{
+			@shadow:0 0 5px @neutral-color, inset 0 3px 8px rgba(0,0,0,0.4);
+			.buttonBackground(darken(@neutral-color, 5), @neutral-color);
+			.box-shadow(@shadow);
+		}
+	}
+	
+	.btn-negative{
+		.buttonBackground(lighten(@negative-color, 5), @negative-color);
+		&.active{
+			@shadow: 0 0 5px lighten(@negative-color, 30), inset 0 3px 8px rgba(0,0,0,0.4);
+			.buttonBackground(darken(@negative-color, 5), @negative-color);
+			.box-shadow(@shadow);
+		}
+	}
+
+	.results{
+		position: relative;
+		color: @white;
+		background-color: fade(@black, 60);
+		.box-shadow(inset 0 3px 4px fade(@black, 40));
+		padding: @padding-small;
+		.border-radius(12px);
+		float: right;
+		top: 18px;
+		right: 20px;
+	}
+}
+
+// Counter
+// -------
+
+.counter{
+	float: right;
+	display: inline-block;
+	position: relative;
+
+	.redeem{
+		.size(26px, 26px);
+	    font-size: 14px;
+	    .border-radius(50%);
+	    position: absolute;
+	    right: 0;
+	    top: 7px;
+	    border: none;
+	    color: @white;
+	    text-align: center;
+	    .transition(transform 1s ease);
+	    &:hover{
+	    	transform: rotate(.5turn);
+	    	.rotate(180);
+	    }
+	}
+
+	.tooltip{min-width: 120px}
+
+	.points{
+		a{
+			margin-top: 2px;
+			padding: 0 40px 0 0;
+			color: @gray;
+			display: inline-block;
+			font-family: SourceSansProBold;
+		    font-size: 22px;
+		    line-height: 41px;
+		    text-align: right;
+		    .cf;
+		}
+	}
+}
+
+// Redeem your points!
+// ------------------
+
+#redeem{
+	.modal-dialog .modal-content .modal-body{
+		ul.redeem-list{
+			padding: 0;
+			li{
+			    border: 4px solid @gray-light;
+			    .border-radius(5px);
+			    //background-color: @white;
+			    list-style-type: none;
+			    padding: 10px;
+			    position: relative;
+			    font-size: 14px;
+			    font-family: SourceSansProLight;
+			    margin-bottom: 20px;
+			    .cf;
+
+			    &.type-1{border-color: @gray-light;
+			    	.bundle-name{
+			    		color: darken(@gray-light, 30);
+			    	}
+			    }
+			    &.type-2{border-color: @green-light;
+			    	.bundle-name{
+			    		color: darken(@green-light, 20);
+			    	}
+			    }
+			    &.type-3{border-color: @blue-light;
+			    	.bundle-name{
+			    		color: darken(@blue-light, 30);
+			    	}
+			    }
+			    &.type-4{border-color: @blue;
+			    	.bundle-name{
+			    		color: darken(@blue, 20);
+			    	}
+			    }
+
+			    .bundle-description{
+			    	width: 50%;
+			    	float: left;
+				    .bundle-name{
+					    font-family: SourceSansProLight;
+					    font-size: 27px;
+					    line-height: 27px;
+					    text-transform: uppercase;
+				    }
+				}
+
+			    .redeem-action{
+			    	float: right;
+			    	margin: 0 0 0 20px;
+			    	padding: 10px;
+			    }
+
+				&:hover{
+					z-index: 1000;
+					.box-shadow(0 0 20px @yellow);
+					//background-color: @edit-color;
+				}
+			}
+		}
+	}
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	.counter{
+		float: none;
+		width: 100%;
+		text-align: left;
+		.points{padding: 0}
+		.redeem{}
+	}
+
+	.game .game-content p.quote {
+	    font-size: 30px;
+	    line-height: 38px;
+	    padding: 25px;
+	}
+
+	#redeem .modal-dialog .modal-content .modal-body ul.redeem-list{
+		li{width: 100%}
+	}
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+

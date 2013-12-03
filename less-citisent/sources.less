@@ -1,0 +1,223 @@
+// Sources
+// -------------------------
+
+
+
+.profile{
+
+	display: block;
+	float: none;
+	.clearfix();
+	
+	.foto{
+		float: left;
+		display: block;
+		height: 64px;
+		width: 64px;
+		background-color: @white;
+		margin: 6px 6px 6px 0;
+		padding: 6px;
+		border: 1px solid fade(@black, 15);
+		.box-shadow(@default-shadow);
+		.border-radius(6px);
+		
+		img{
+			width: 100%;
+			margin: 0;
+			.border-radius(3px);
+		}
+	}
+
+	h2{	
+		font-family: SourceSansProExtraLight !important;
+		font-size: 42px;
+		line-height: 42px;
+		margin-top: @line-height-computed * .7;
+		margin-left: 80px;
+	}
+
+	p, p.bio{
+		margin-left: 80px;
+		margin-top: .5em;
+		font-family: SourceSansProLight !important;
+		font-size: 18px;
+		line-height: 120%;
+	}
+
+	form{
+		margin: 0;
+		display: inline;
+	}
+
+	.edit_name,
+	.edit_bio{
+		display: block;
+		font-family: inherit;
+		letter-spacing: inherit;
+		&:hover{
+			background-color: @edit-color;
+		}
+	}
+}
+
+.source-type{
+	margin-left: 80px;
+	vertical-align: middle;
+	margin-bottom: @line-height-base;
+	
+	input[type=radio]{
+		margin-top: -3px;
+		margin-right: 1ex;
+	}
+	form{display: inline-block;}
+
+	.divider{
+		display: inline-block;
+		width: 20px;
+	}
+
+	.gender{
+		color: @gray-light;
+		text-transform: uppercase;
+	}
+}
+
+.connection{
+  display: block;
+  margin: 0 .3ex 1ex 0;
+  padding: 0 5px;
+  color: @white;
+  font-size: 19px;
+  font-family: SourceSansProSemibold;
+  text-shadow: -1px -1px 0 fade(@black, 30%);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  .border-radius(18px);
+  
+  .fa-twitter,
+  .fa-facebook,
+  .fa-feed{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+  .remove{
+    font-size: @font-size-base;
+  }
+
+  .pull-right{
+  	margin: 5px 9px 0 0;
+
+	}
+  
+  a{
+    color: @white;
+    &:hover{
+      color: @white;
+      text-decoration: none;
+    }
+  }
+  
+  &.twitter{
+    background-color: @twitter-color;
+    .box-shadow(0 0 3px darken(@twitter-color, 20%) inset);
+  }
+  &.facebook{
+  	background-color: @facebook-color;
+    .box-shadow(0 0 3px darken(@facebook-color, 20%) inset);
+  }
+  &.feed{
+  	background-color: @feed-color;
+    .box-shadow(0 0 3px darken(@feed-color, 20%) inset);
+  }
+}
+
+.add-connection{
+	.input-group,
+	.form-group{
+		.cf;
+		a,input,button{
+			display: inline-block !important;
+			float:left;
+		}
+		button{.nbrr}
+		input[type="text"]{.nbrl;.nbrr;.nbl;.nbr;width:370px;}
+		input[type="submit"]{.nbrl}
+		ul.dropdown-menu{
+			position: absolute;
+			top: 0;
+			width: auto;
+		}
+	}
+}
+
+// for channel connection table, under profile
+
+.connection-switch{
+	width: 100px;
+}
+
+.connection-name{
+	font-family: SourceSansProLight;
+	font-weight: normal;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.connection-icons{
+  
+  .channel-name{
+    display: inline-block;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    font-size: 11px;
+    margin-right: 3px;
+    .border-radius(11px);
+    .box-shadow(inset 0 0 2px fade(@black, 40));
+    background-color: @black;
+  }
+
+  p i.channel-name{
+  	margin-top: -4px;
+  	line-height: 22px;
+  	margin-left: -7px;
+  }
+
+  .twitter{background-color: @twitter-color}
+  .facebook{background-color: @facebook-color}
+  .feed{background-color: @feed-color}
+  .instagram{background-color: #ad6f1c}
+  .tumblr{background-color:#3b4875 }
+
+  i{
+    display: block;
+    width: 10px;
+    margin: 5px;
+    color: @white;
+
+    text-shadow: 0 0 2px fade(@black, 40);
+  }
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+
