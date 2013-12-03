@@ -1,4 +1,4 @@
-cs-gui
-======
+Kane
+====
 
-CitiSent Graphical User Interface
+CitiSent Kane: CitiSent's graphical user interface
