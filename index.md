@@ -1,9 +1,35 @@
 ---
 layout: standard
-title: CitiSent GUI
+title: Kane
 ---
 
-<h1 class='huge thin title'>{{ page.title }} <span class='orange'>Macaron</span></h1>
+<div class="page-header">
+  <h1>Example page header <small>Subtext for header</small></h1>
+</div>
+
+
+<h1 class='huge thin title'><span class='orange'>CitiSent</span> {{ page.title }}</h1>
+
+<div class='row'>
+  <div class='col-md-8'>
+    <div class="jumbotron well">
+      <h1>Hello, world!</h1>
+      <p>...</p>
+      <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+    </div>
+  </div>
+  <div class='col-md-4'>
+    <ul class="list-group">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+
+  </div>
+</div>
+
 <div class='row'>
   <div class='col-md-6'>
     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
@@ -16,45 +42,26 @@ title: CitiSent GUI
    </ul>
    
    <h3>Un título de Tercer Nivel</h3>
-   <form action="#" method="post">
-    <div>
-     <label for="name">Text Input:</label>
-     <input type="text" name="name" id="name" value="" tabindex="1" />
-   </div>
-
-   <div>
-     <h4>Radio Button Choice</h4>
-
-     <label for="radio-choice-1">Choice 1</label>
-     <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
-
-     <label for="radio-choice-2">Choice 2</label>
-     <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
-   </div>
-
-   <div>
-    <label for="select-choice">Select Dropdown Choice:</label>
-    <select name="select-choice" id="select-choice">
-      <option value="Choice 1">Choice 1</option>
-      <option value="Choice 2">Choice 2</option>
-      <option value="Choice 3">Choice 3</option>
-    </select>
-  </div>
-  
-  <div>
-    <label for="textarea">Textarea:</label>
-    <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-  </div>
-  
-  <div>
-    <label for="checkbox">Checkbox:</label>
-    <input type="checkbox" name="checkbox" id="checkbox" />
-  </div>
-
-  <div>
-    <input type="submit" value="Submit" />
-  </div>
-</form>
-
+   <form role="form">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" id="exampleInputFile">
+      <p class="help-block">Example block-level help text here.</p>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Check me out
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 </div> 
 </div>
