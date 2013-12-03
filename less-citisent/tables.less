@@ -1,0 +1,174 @@
+
+// Tablas
+// ------
+
+.table {
+
+  thead{
+    font-family: SourceSansProSemibold;
+    font-size: 12px;
+    vertical-align: bottom;
+    th a{color: @gray}
+    th a:hover{color: @black}
+  }
+
+  th{font-weight: normal}
+  th,
+  td {
+    &.categorias,
+    &.concordancias{
+      font-size: 11px;
+    }
+    &.light{
+      font-family: SourceSansProLight;
+      word-wrap: break-word;
+    }
+
+    &.small{font-size: 11px}
+    &.number-big{
+      font-family: SourceSansProExtraLight;
+      font-size: 25px;
+      line-height: 35px;
+      vertical-align: middle;
+      color: fade(@black, 50%);
+      text-shadow:1px 1px 0 @white;
+    }
+
+    &.study-status{
+      vertical-align: middle;
+
+      *{white-space: nowrap}
+
+      .disabled{
+        font-size: 12px;
+        letter-spacing: .3ex;
+        width: 80px;
+        text-transform: uppercase;
+        color: @gray-light;
+
+        &.btn-success{
+          color: @white;
+          text-shadow: 1px 1px 1px fade(@black, 60%);
+        }
+      }
+    }
+  }
+
+  .fa-eye,
+  .fa-eye-slash{
+    font-size: 22px;
+    margin-top: 1px;
+  }
+}
+
+
+.table-rb{
+  tbody{
+    border: 1px solid @table-border-color;
+  }
+}
+
+// tabla de los elementos del estudio
+
+table.study-elements{
+  font-size: 12px;
+  .table-rb;
+  tbody{
+    background-color: fade(@white, 70);
+  }
+  td.place-name,
+  td.topic-name,
+  td.source-name{
+    font-family: SourceSansProSemiBold;
+    vertical-align: top;
+  }
+  
+  td.place-type,
+  td.element-count{
+    color: fade(@black, 50%);
+    strong{
+      color: @black;
+    }
+  }
+}
+
+td.timestamp,
+td.number{
+  font-family: @font-family-monospace;
+  text-align: right;
+  font-size: 14px;
+}
+
+td.timestamp{
+  color: @gray-light;
+  text-align: left;
+}
+
+.table-plans-rows{
+
+  tr td{
+    vertical-align: middle !important;
+  }
+
+  tbody{
+    border: 1px solid @table-border-color;
+  }
+
+  tbody tr{
+    &:hover{
+      background-color: @white;
+    }
+  }
+
+  td.plan-name{
+    font-family: SourceSansProBlack;
+    text-transform: uppercase;
+  }
+  tr.current_plan{
+
+    height: 60px;
+    background-color: darken(@link-color, 3%);
+    border: 2px solid lighten(@link-color, 5);
+    text-shadow: 1px 1px 2px fade(@black, 30%);
+    color: @white;
+    
+    &:hover{
+      background-color: lighten(@link-color, 6%) !important;
+    }
+  }
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+  .table{
+    tr{
+      td{
+        font-size: 13px;
+        line-height: 1.0;
+        padding: 1px; 
+        i{
+          &.fa{
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+

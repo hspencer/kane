@@ -1,0 +1,306 @@
+// Forms
+// -------------------------
+
+label{
+	font-weight: normal;
+	font-family: SourceSansProBold;
+}
+
+.form-search{
+
+	.search-query{
+		float: left;
+		display: inline-block;
+		.form-control;
+		.nbrr;
+		.nbr;
+		width: 80%;
+	}
+	.btn-default{
+		float: left;
+		display: inline-block;
+		.nbrl;
+		padding-top: @padding-base-vertical - 1;
+	}
+}
+
+.control-label{
+	font-family: SourceSansProSemibold;
+	font-size: 14px;
+}
+
+.radio-inline{
+	
+		font-size: 14px;
+		font-family: SourceSansProLight;
+		text-transform: uppercase;
+		margin: 5px 0 0;
+
+	input{
+		margin: -2px 3px 0 26px;
+		&:first-child{
+			margin: -2px 3px 0 0;
+		}
+	}
+}
+
+
+
+.required{
+    
+	input[type="text"]{
+		border: 2px solid @link-color;
+		.nbr;
+	}
+
+	input[type="text"]:focus{
+	  .box-shadow(0 0 4px @link-color);
+	}
+
+}
+
+// Elementos de Cabecera
+// -------------------------
+
+// formulario de búsqueda en la cabecera de listados
+
+
+.heading-form{
+
+	display: inline-block;
+	margin: 0 0 20px 0;
+	padding: 0;
+	text-align: right;
+	*{clear:none}
+
+}
+
+
+// Privacidad de los Elementos
+// ---------------------------
+
+.list-switch{
+	margin: 0 7px 22px 0;
+	a{
+		padding: @padding-small-vertical @padding-small-horizontal;
+		i{
+			font-size: 18px;
+			padding: 2px 2px 0;
+		}
+	}
+}
+
+.public-switch{
+	display: inline-block;
+	width: 230px;
+	position: absolute;
+	text-align: right;
+	top: 0;
+	right: 0;
+
+	&.free-account{
+		width: auto;
+		position: relative;
+		display: inline-block;
+		color: @gray;
+		font-size: 13px;
+		margin: 12px 0 0 12px;
+		a{
+			display: inline;
+			padding: 0;
+			i{
+				color: @orange;
+			}
+		}
+		.popover{
+			color: @gray-dark;
+			text-transform: normal;
+			width: 400px;
+		}
+	}
+}
+
+.study-status-legend,
+.public-status{
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: SourceSansProSemiBold;
+	padding: 0 2ex;
+	margin-top: 6px;
+	color: fade(@black, 25%);
+}
+
+/////////////////////////////////////////////////////////////////////////// forms
+
+.input-big{
+	.input-lg;
+
+  &:focus{
+  	border-color: @blue;
+  	color: @blue;
+  }
+}
+
+.ui-helper-hidden-accessible{display:hide}
+
+.ui-autocomplete { 
+	position: absolute;
+	cursor: default; 
+	z-index: 10000 !important;
+
+	li:hover{
+		background-color: fade(@link-color, 70);
+		a{
+			color: @white;
+			text-shadow: 1px 1px 1px fade(@black, 80);
+		}
+	}
+}
+
+.add-to-study{
+	font-family: SourceSansProLight;
+	line-height: 32px;
+	font-size: 22px;
+	width: 530px;
+	height: 42px;
+}
+
+
+* html .ui-autocomplete { width: 1px; } /* without this, the menu expands to 100% in IE6 */
+
+/* Menu
+----------------------------------*/
+.ui-menu {
+        list-style:none;
+        padding: 2px;
+        margin: 0;
+        display:block;
+        background-color: fade(@white, 95%);
+        z-index: 10001 !important;
+        .box-shadow(2px 2px 2px fade(@black, 10%));
+}
+
+.ui-menu .ui-menu {
+        margin-top: -3px;
+}
+
+.ui-menu .ui-menu-item {
+    margin:0;
+    padding: 0;
+    width: 100%;
+    border-top: 1px solid @table-border;
+    &:first-child{
+        border: none;
+    }
+}
+
+.ui-menu .ui-menu-item a {
+	color: @gray;
+    text-decoration:none;
+    display:block;
+    padding:.2em .4em;
+    line-height:1.5;
+    zoom:1;
+}
+
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+    background-color: @table-bg-hover;
+    color: @link-color;
+}
+
+
+.horizontal-nav{
+	.tcenter;
+}
+
+//////////////////////////////////////////////////////////////////////////////////// inline edits
+
+.edit,
+.edit-inline{
+
+	&:hover{
+		background-color: @edit-color;
+		cursor: text;
+		color: fade(@black, 80%) !important;
+		.border-radius(3px);
+	}
+
+  	&.light *{
+		font-family: SourceSansProExtraLight !important;
+		letter-spacing: inherit;
+  	}
+}
+
+form.jeditable{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  overflow: visible;
+  background-color: @edit-color;
+  overflow: visible;
+
+  *{
+		background-color: @edit-color;
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: inherit;
+		font-family: inherit;
+		padding: inherit;
+		line-height: inherit;
+		border: 0;
+		overflow: visible;
+  	}
+}
+
+.input-negative{
+  background-color: fade(@black, 50%) !important;
+  color: @gray-light !important;
+  border: none !important;
+}
+
+.input-range{
+  width: auto !important;
+}
+
+.show-value{
+	color: @black;
+	display: inline-block;
+	font-family: SourceSansProExtraLight;
+	font-size: 23px;
+	.text-overflow;
+	text-shadow: -2px -2px 1px #FFFFFF;
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+
+	.public-switch{
+		&.free-account{
+			width: 100%;
+			text-align: center;
+			margin: 12px 0;
+		}
+	}
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+

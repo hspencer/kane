@@ -1,0 +1,129 @@
+// Modales... ¿cómo andan tus modales?
+// -------
+
+.modal-dialog{
+	// para calzar el loading con la base del navbar y la parte superior del modal
+	padding-top: 50px;
+}
+
+.modal-content{
+
+	.modal-header{
+		h3,
+		h4{
+			display: inline;
+			text-transform: uppercase;
+			font-family: SourceSansProLight;
+		}
+	}
+
+	&.modal-signin{
+		.narrow-modal;
+		margin: 100px auto;
+		.border-radius(0 0 @border-radius-large @border-radius-large);
+		background-color: @gray-lighter;
+		border: 1px solid fade(@black, 50%);
+
+		input[type=text],
+		input[type=email],
+		input[type=password]{
+			background-color: fade(@white, 80%);
+		}
+
+		.modal-header {
+			background-color: fade(@black, 90%);
+			border-bottom: 1px solid rgba(0, 0, 0, .15);
+			h4,i{color: fade(@white, 50%)}
+			.close{
+				color: fade(@white, 60%);
+			}
+		}
+
+		.modal-body{
+
+			.amnesia{
+				text-align: right;
+
+				a{
+					font-size: 13px;
+					padding: 0 1ex;
+					.border-radius(3px);
+					color: fade(@black, 50%);
+					cursor: pointer;
+					&:hover{
+						color: @white;
+						background-color: @link-color;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.remember{
+				font-size: 14px;
+				font-family: SourceSansProSemibold;
+				min-width: 250px;
+			}
+		}
+
+		.modal-footer{
+			border-top: 1px solid rgba(0, 0, 0, .2);
+		}
+	}
+
+	&.user-invitation{
+		
+	}
+	form,
+	.form{
+		margin: 0;
+	}
+}
+
+// New Sources & New Study
+
+#new_thesauru,
+#new_sourceset,
+#sourceset_new_modal,
+#new-study-modal{
+	.modal-content{
+		.narrow-modal;
+	}
+}
+
+.narrow-modal{
+	width: 400px;
+	margin: 0 auto;
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	.modal-signin{
+		width: 100% !important;
+		margin: 0 auto !important;
+
+		.modal-body{
+			padding: 19px 16px 0px 16px;
+		}
+
+		.modal-footer{
+			margin-top: 0;
+		}
+	}
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+

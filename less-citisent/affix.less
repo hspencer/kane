@@ -1,0 +1,65 @@
+// Affix
+// -----------------------------------------------------------------------------------------------------------
+
+.affix {
+	top: 70px;
+	position: fixed;
+}
+
+.sources-affix{
+	max-width: 360px;
+}
+
+.affix-top{
+	position: relative;
+}
+
+.affix-bottom{
+	position: absolute;
+	top: 0;
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	.affix,
+	.affix-top,
+	.affix-bottom{
+		position: static;
+	}
+	.sources-affix{
+		position: static;
+		max-width: 100%;
+	}
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+	.affix,
+	.affix-top,
+	.affix-bottom{
+		position: static;
+	}
+	.sources-affix{
+		position: static;
+		max-width: 100%;
+	}
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+	.sources-affix{
+		width: 300px;
+	}
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+
+	.sources-affix{
+		width: 360px;
+	}
+
+}

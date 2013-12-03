@@ -1,0 +1,272 @@
+
+// Tags
+// ----
+
+.tag{
+
+  display: inline-block;
+  background-color: fade(@white, 80);
+  border:1px solid rgba(0, 0, 0, 0.15);
+  .border-radius(13px);
+  .box-shadow(2px 2px 1px rgba(0, 0, 0, 0.02));
+  color: fade(@black, 70%);
+  margin: 0 .3ex 1ex 0;
+  padding: 2px 9px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-family: SourceSansProRegular;
+  text-shadow: white 1px 1px 1px;
+  
+  &.lugar{
+  	font-size: 12px;
+  	a{
+  		font-family: SourceSansProSemibold;
+  	}
+  }
+
+  a,
+  a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    
+    &.active,
+    &.inactive{
+      display: inline-block;
+      margin: 0 3px 0 -2px;
+
+      i{
+        color: @black
+      }
+
+    }
+
+    &.active{
+      text-shadow: 0 0 4px @white;
+    }
+    &.inactive{
+      i{color: @gray-light}
+    }
+  }
+  
+  i{
+    color: fade(@link-color, 50%);
+    font-size: 14px;
+    &:hover{
+      color: @link-color;
+    }    
+  }
+
+  &.black{
+  	color: @white;
+  	font-family: SourceSansProSemiBold;
+  	background-color: @black;
+  	text-shadow: none;
+  }
+  
+  .topic,
+  .toponimia{
+    color: @black;
+  }
+  
+  a.topic,
+  a.toponimia{
+    color: @link-color;
+  }
+  
+  &.selected{
+    #gradient > .vertical(rgb(20, 20, 20), rgb(0, 0, 0));
+    font-size: 16px;
+    color: white;
+
+    .active,
+    .inactive,
+    
+    *, a, strong, a i{
+      color: white;
+      text-shadow: none !important;
+    }
+  }
+}
+
+.tag-mini{
+  display: inline-block;
+  background-color: @tag-color;
+  border: 1px solid fade(darken(@tag-color, 15), 30);
+  .border-radius(3px);
+  color: darken(@tag-color, 60);
+  margin: 0 .3ex .3ex 0;
+  padding: 1px 4px 0 4px;
+  line-height: 100%;
+  white-space: nowrap;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: SourceSansProBold;
+
+  i{margin-left: 4px}
+  
+  &.type-1,
+  &.type-2,
+  &.type-3,
+  &.type-4{
+  	min-width: 70px;
+  }
+  //message
+  &.type-1{
+    background-color: fade(@black, 80);
+    color: white;
+    text-shadow: none;
+  }
+
+  //bug
+  &.type-2{
+    background-color: fade(@red, 80);
+    color: @white;
+  }
+
+  //improvement
+  &.type-3{
+    background-color: fade(@blue, 80);
+    color: @white;
+  }
+  //question
+  &.type-4{
+    background-color: fade(@white, 80);
+  }
+
+  // Status //////////////////////////////////////////
+
+  &.pending,
+  &.ok{
+  	font-size: 22px;
+  	font-family: SourceSansProLight;
+  	background: none;
+  	border: none;
+  	// text-shadow: 1px 1px 1px fade(@black, 50);
+  }
+
+  &.pending{
+  	//#gradient > .vertical(@orange, @yellow);
+  	color: orange;
+  }
+
+  //ok (status message)
+  &.ok{
+    //#gradient > .vertical(@green, darken(@green, 10));
+    //color: @white;
+    color: @green;
+  }
+
+  // plans
+
+  &.plan-Free,
+  &.plan-Mini,
+  &.plan-Consultant,
+  &.plan-Enterprise{
+    color: @white;
+  }
+
+  &.plan-Free{
+    background-color: @green;
+  }
+  &.plan-Mini{
+    background-color: @blue;
+  }
+  &.plan-Consultant{
+    background-color: @red;
+  }
+  &.plan-Enterprise{
+    background-color: @purple;
+  }
+}
+
+.topic-message{
+  font-size: 13px;
+}
+
+.del{
+  line-height: 90%;
+  font-size: .9em;
+  color: white;
+  display: inline-block;
+  padding: 0 4px 2px;
+  background-color: #DDDDDD;
+  .border-radius(4px);
+}
+
+.del:hover{
+  color: white;
+  background-color: #545454;
+  text-decoration: none;
+}
+
+
+// Display
+// -------
+
+
+.by-line{
+  display: inline-block;
+  font-size: 11px;
+  background-color: @white;
+  white-space: nowrap;
+  padding: 0 .5ex;
+  margin-left: 1ex;
+  .border-radius(3px);
+  color: fade(@black, 60%);
+  strong{
+    color: fade(@black, 80%);
+  }
+}
+
+.edited-by{
+  display: inline-table;
+  font-size: 11px;
+  line-height: 12px;
+  color: fade(@black, 60%);
+  strong{
+    color: fade(@black, 80%);
+  }
+}
+
+ul.social-networks{
+  display: inline-block;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+
+  li{
+    list-style-type: none;
+    display: inline;
+    width: auto;
+    margin: 0 0 0 .5em;
+    padding: 0;
+    a{
+      color: fade(@black, 20);
+      &:hover{
+        color: @black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+ul.topic-list{
+  list-style-type: none;
+
+  .topic{.tag-mini();}
+}
+
+
+// Notice
+// ------
+.alert{
+  button.close{
+    margin: -9px -5px 0 0;
+  }
+}
+
+.alert-notice {
+  background-color: @white;
+  border: 5px solid @gray-lighter;
+  color: @gray;
+}

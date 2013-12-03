@@ -1,0 +1,230 @@
+// User Account & Plans
+// --------------------
+
+
+// Plan: ficha
+// -----------
+
+.plan{
+
+  @jump: 5px;
+  position: relative;
+  text-align: center;
+  background-color: @white;
+  padding: 0;
+  border: 6px solid @input-border;
+  .border-radius(8px);
+  font-size: @font-size-base * .85;
+  line-height: 16px;
+  //min-height: 535px;
+  .transition(.1s ease-in-out all);
+  margin: @jump 0 0 0;
+
+  &.plan-Free{
+    background-color: lighten(@green, 50);
+    border: 6px solid lighten(@green, 20);
+    h2{
+      color: @green;
+    }
+    &:hover{border-color: @green}
+  }
+  
+  &:hover{
+    margin: 0 0 @jump 0;
+    border: 6px solid @orange;
+  }
+
+  h2{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: SourceSansProLight;
+    color: @link-color;
+    .air-bottom();
+  }
+
+  .illustration{
+    max-height: 150px;
+  }
+
+  .users,
+  .studies,
+  .hours{
+    float: left;
+    width: 20%;
+    text-align: right
+  }
+
+  .studies{
+    display: inline-block;
+    color: @orange;
+    font-family: SourceSansProSemibold;
+    font-size: 32px;
+  }
+
+  .hours{
+    font-size: 18x;
+    color: @black;
+    font-family: SourceSansProSemibold;
+  }
+
+  .users{
+    color: @green;
+  }
+
+  p{
+
+    &.details{
+    padding: 1.7em 1em 1em 1em;
+    border-top: 1px solid @gray-light;
+    border-bottom: 1px solid @gray-light;
+    text-align: left;
+    margin: @line-height-computed/2 0 0 0;
+    color: fade(@black, 45);
+
+      .legend{
+        display: block;
+        width: 160px;
+        margin-left: 25%;
+
+      }
+    }
+
+    &.price{
+      color: @black;
+      text-align: center;
+      background-color: fade(@yellow, 20);
+      padding: 2em 1em 1em 1em;
+      strong{font-size: @font-size-base * 2}
+      margin: 0;
+      
+      .deal{
+        display: block;
+        strong{font-size: 12px}
+        clear: both;
+        font-size: 12px;
+        color: @black;
+        margin: 10px 0 0 0;
+      }
+
+      .btn{
+        margin: 10px 0 0 0;
+        .w100;
+      } 
+    }
+  }
+}
+
+
+td{
+  &.date{
+    font-size: 14px;
+  }
+
+}
+
+// Account details
+// ---------------
+
+.account-details{
+  line-height: @line-height-base * .9;
+
+  img{
+    max-height: 100px;
+  }
+
+  td.avatar{
+    text-align: right;
+  }
+
+  h1{
+    font-family: SourceSansProBold;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 18px;
+    margin-top: 24px;
+    margin-bottom: 2px;
+  }
+
+  a i:hover{
+    text-decoration: none;
+    line-height: 100%;
+  }
+
+  .w55{
+    padding-left: 16px;
+  }
+}
+
+.account .hint{
+  margin: 5px 0 0 170px;
+  font-size: 13px;
+}
+
+
+.connection-section{
+	display: block;
+}
+
+ul#account_detail{
+	padding: 20px;
+	font-size: 13px;
+
+	&.wide{
+		min-width: 260px;
+	}
+
+	li{
+		.value-key{
+			display: inline-block;
+			width: 120px;
+			text-align: right;
+			color: fade(@gray, 60);
+			margin-right: 10px;
+      text-transform: capitalize;
+		}
+		strong{
+			font-family: SourceSansProSemibold;
+
+			&[class*="plan-"]{
+				text-transform: uppercase;
+				font-size: 11px;
+				padding: 0 3px;
+				color: @white;
+				.border-radius(4px);
+			}
+			&.plan-Free{
+				background-color: @green;
+			}
+			&.plan-Mini{
+				background-color: @blue;
+			}
+			&.plan-Consultant{
+				background-color: @red;
+			}
+			&.plan-Enterprise{
+				background-color: @purple;
+			}
+		}
+	}
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+

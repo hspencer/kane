@@ -1,0 +1,232 @@
+html{min-height: 100%}
+
+.noise-bk{background: url('@{assetsPath}bk.gif') repeat-x center bottom, url('@{assetsPath}ns.png') repeat scroll 0 0 #FFF;}
+
+.footer{
+	min-height: 150px;
+	color: fade(@black, 50%);
+	text-shadow: 1px 1px 0 white;
+
+	a{
+		color: fade(@black, 75%);
+		padding: 0 1ex;
+		.border-radius(1ex);
+		
+		&:hover{
+			color: @black;
+			background-color: @white;
+			text-decoration: none;
+		}
+	}
+
+	ul{
+		margin: 0;
+		padding: 0;
+		li{
+			font-size: 14px;
+			display: inline;
+			list-style-type: none;
+			&.air-left{
+				margin-left: 32px;
+			}
+		}
+	}
+}
+
+// responsive video
+
+.video-wrapper{
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	display:block;
+	object,
+	embed,
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+// Marketing Pages
+// applied as 'row.marketing'
+
+.marketing [class*=" col-"],
+.marketing [class^="col-"]{
+	padding: 40px;
+
+	.padding{padding: 40px;}
+	&.no-padding{padding: 0 !important}
+	
+	.air-top{margin-top: 60px}
+
+	h2{
+		font-size: 60px;
+		line-height: 48px;
+		font-family: SourceSansProExtraLight;
+		letter-spacing: -0.1ex;
+	}
+	
+	p{
+		margin-top: 32px;
+		font-family: SourceSansProLight;
+		font-size: 24px;
+		line-height: 32px;
+		
+		strong{
+			font-family: SourceSansProBold;
+			font-weight: normal;
+		}
+		
+    &.tagline{
+		font-size: 26px;
+		margin-left: 114px;
+		margin-top: -25px;
+		}
+
+    .btn{
+		font-family: SourceSansProLight;
+		font-size: 20px;
+		margin-top: 14px;
+		padding: 7px 22px 8px;
+		.border-radius(2px)
+    	}
+	}
+}
+
+// Panel overides
+.panel-heading{font-family: SourceSansProSemibold}
+.panel-default .panel-heading{color: @white}
+
+// Devise Login
+
+.duendes{
+	background-image: url('@{assetsPath}duendes-colaboradores.svg'); 
+	background-position: center center; 
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.semi-transparent{
+	background-color: rgba(255, 255, 255, .9)
+}
+
+p.bio{
+	font-family: SourceSansProLight;
+	font-size: 14px;
+}
+
+.beta-container{
+	position: absolute;
+	top: 0;
+	right: 16px;
+	.size(180px, 180px);
+	overflow: hidden;
+	
+	.beta-label{
+		.rotate(45deg);
+		position: absolute;
+		font-family: SourceSansProBold;
+		color: @white;
+		text-shadow: 0 0 2px fade(@black, 40);
+		padding: 5px;
+		border: 1px double @green;
+		top: 60px;
+		right: -50px;
+		text-align: center;
+		width: 250px;
+		background-color: @green;
+		text-transform: uppercase;
+	}
+}
+
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	
+	.marketing{
+
+		.col-md-7{
+			h2{
+			    font-size: 37px;
+			    line-height: 100%;
+			}
+			p{
+				font-family: SourceSansProLight;
+				font-size: 18px;
+				line-height: 21px;
+				margin-top: 19px;
+			}
+
+			img.padding{
+				padding: 0;
+			}
+
+			.padding{
+				padding: 0;
+			}
+
+			padding: 10px;
+		}
+
+		.col-md-5{
+			.padding{
+				padding: 0;
+			}
+
+		}
+	}
+
+	hr{
+		margin-top: 25px;
+		margin-bottom: 0;
+	}
+
+	.footer{
+		margin: 22px;
+		ul{
+			background-color: fade(@white, 88);
+   			padding: 3px;
+   			.border-radius(50%);
+
+			li,
+			li.air-left,
+			li.pull-right{
+				float: none;
+				display: block;
+				margin: 20px;
+				text-align: center;
+			}
+		}
+	}
+
+
+	.well-well{
+		.box-shadow(0 0 3px @white inset);
+		background-color: @white;
+		.border-radius(16px);
+	}
+
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
