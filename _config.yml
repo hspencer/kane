@@ -8,7 +8,10 @@ markdown: rdiscount
 pygments: true
 permalink: pretty
 
-baseurl: "http://citisent.github.io/kane"
+exclude: ['node_modules', 'bower_components']
+
+baseurl: "localhost"
+port: 4000
 
 # Aliases
 bootstrap: bower_components/bootstrap/dist
