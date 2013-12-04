@@ -3,65 +3,43 @@ layout: standard
 title: Kane
 ---
 
-<div class="page-header">
-  <h1>Example page header <small>Subtext for header</small></h1>
+
+
+<div class='row marketing'>
+  <div class="col-md-7">
+    <div class="page-header">
+      <h1 class='huge title'><span class='black'>CitiSent</span> <strong class='uc'>{{ page.title }}</strong> <small >LESS is more</small></h1>
+    </div>
+    <p>
+      <strong class='cyan uc'>Kane</strong> es la interfaz de CitiSent, el lugar donde puedes crear 
+      <i class="cs-icon-study yellow"></i>
+      <strong>estudios</strong>
+      rápidamente a través de un panel de configuración simple y fácil de usar. Tan solo debes agregar tus
+      <i class="cs-icon-source blue"></i>
+      <strong>fuentes</strong>
+      ,
+      <i class="cs-icon-topic orange"></i>
+      <strong>temas</strong>
+      y
+      <i class="cs-icon-place green"></i>
+      <strong>lugares</strong>
+      o bien dejar alternativas abiertas para explorar nuevos contenidos. Con CitiSent podrás construir estudios sobre los temas que a tí te importan.
+    </p>
+  </div>
+  <div class="col-md-5 center">
+    <img class="img-circle" src="/assets/kane.gif">
+  </div>
 </div>
 
-
-<h1 class='huge thin title'><span class='orange'>CitiSent</span> {{ page.title }}</h1>
-
 <div class='row'>
-  <div class='col-md-8'>
-    <div class="jumbotron well">
-      <h1>Hello, world!</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
-    </div>
-  </div>
-  <div class='col-md-4'>
-    <ul class="list-group">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-
-  </div>
-</div>
-
-<div class='row'>
-  <div class='col-md-6'>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-  </div>
-  <div class='col-md-6'>
-    <ul>
-     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-     <li>Aliquam tincidunt mauris eu risus.</li>
-     <li>Vestibulum auctor dapibus neque.</li>
-   </ul>
-   
-   <h3>Un título de Tercer Nivel</h3>
-   <form role="form">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" id="exampleInputFile">
-      <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Check me out
-      </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
-</div> 
+<div class='col-md-1 col-md-offset-1'> <i class='fa fa-4x cs-icon-study'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-source'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-topic'></i></div>  
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-place'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-barchart'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-bublechart'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-user'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-config'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-brain'></i></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-branch'></i></div> 
 </div>

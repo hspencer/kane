@@ -4,10 +4,25 @@ a:hover{
 	text-decoration: none;
 }
 
+
+.page-header{
+	h1{
+		color: @orange
+	}
+}
+
+h1, h2, h3{
+	margin-top: 0;
+	letter-spacing: -0.07ex;
+}
+
+
 h1, h2, h3, h4, h5, h6 { 
 	small {
+		letter-spacing: normal;
 		font-weight: normal;
-		color: @gray-light;
+		color: mix(@black, @white, 30);
+		text-shadow: 1px 1px 0 fade(@white, 70);
 	}
 
 	&.thin,
