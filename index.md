@@ -8,10 +8,10 @@ title: Kane
 <div class='row marketing'>
   <div class="col-md-7">
     <div class="page-header">
-      <h1 class='huge title'><span class='black'>CitiSent</span> {{ page.title }} <small >LESS is more</small></h1>
+      <h1 class='huge title'><span class='black'>CitiSent</span> <strong class='uc'>{{ page.title }}</strong> <small >LESS is more</small></h1>
     </div>
     <p>
-      <strong class='cyan'>Kane</strong> es la interfaz de CitiSent, el lugar donde puedes crear 
+      <strong class='cyan uc'>Kane</strong> es la interfaz de CitiSent, el lugar donde puedes crear 
       <i class="cs-icon-study yellow"></i>
       <strong>estudios</strong>
       rápidamente a través de un panel de configuración simple y fácil de usar. Tan solo debes agregar tus
@@ -27,7 +27,7 @@ title: Kane
     </p>
   </div>
   <div class="col-md-5 center">
-    <img class="illustration padding" codebase="http://www.savarese.com/software/svgplugin/" type="image/svg+xml" src="/assets/citisent-logo-sq.svg">
+    <img class="img-circle" src="/assets/kane.gif">
   </div>
 </div>
 

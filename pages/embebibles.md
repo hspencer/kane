@@ -1,5 +1,5 @@
 ---
-layout: standard
+layout: embeds
 title: Embebibles
 ---
 
