@@ -27,7 +27,7 @@ title: Kane
     </p>
   </div>
   <div class="col-md-5 center">
-    <img class="img-circle" src="{{ site.baseurl }}/assets/kane.gif">
+    <img class="img-circle" src="{{ site.baseurl }}/assets/kane.jpg">
   </div>
 </div>
 
