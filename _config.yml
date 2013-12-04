@@ -1,16 +1,30 @@
 # Jekyll Configuration
-safe: true
+safe: false
 source: .
 destination: _site
 lsi: false
 markdown: rdiscount
+
 pygments: true
 permalink: pretty
+
 baseurl: "http://citisent.github.io/kane"
-exclude: ['*.less']
-pygments: false
-relative_permalinks: true
+
+# Aliases
+bootstrap: bower_components/bootstrap/dist
+jquery: bower_components/jquery
+font-awesome: bower_components/font-awesome
 
 # Project Settings
-project:
-    name: Kane
+kane: 
+    version: 0.0.1
+    minor_version: 0.0
+    license: The Artistic License 2.0
+    author:
+        name: Herbert Spencer
+        email: herbert@citisent.com
+        twitter: hspencer
+    github:
+        url: https://github.com/CitiSent/kane.git
+        project: kane
+        org: CitiSent
