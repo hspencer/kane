@@ -27,7 +27,7 @@ title: Kane
     </p>
   </div>
   <div class="col-md-5 center">
-    <img class="img-circle" src="/assets/kane.gif">
+    <img class="img-circle" src="assets/kane.gif">
   </div>
 </div>
 
