@@ -7,7 +7,9 @@ markdown: rdiscount
 pygments: true
 permalink: pretty
 baseurl: "http://citisent.github.io/kane"
-
+exclude: ['*.less']
+pygments: false
+relative_permalinks: true
 
 # Project Settings
 project:
