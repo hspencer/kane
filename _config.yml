@@ -5,13 +5,12 @@ destination: _site
 lsi: false
 markdown: rdiscount
 
+baseurl: http://citisent.github.io/kane
+
 pygments: true
 permalink: pretty
 
 exclude: ['node_modules', 'bower_components']
-
-baseurl: "localhost"
-port: 4000
 
 # Aliases
 bootstrap: bower_components/bootstrap/dist
