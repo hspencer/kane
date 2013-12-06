@@ -1,0 +1,142 @@
+// Button pseudo states
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.btn-pseudo-states(@color, @background, @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  .transition(all 1s ease);
+  &:hover,
+  &:focus{
+               color: fadein(lighten(@color, 50), 30);
+    background-color: lighten(@background, 10);
+        border-color: lighten(@border, 5);
+  }
+
+  &:active,
+  &.active {
+               color: fadein(lighten(@color, 50), 50);
+    background-color: darken(@background, 5%);
+        border-color: darken(@border, 10%);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border
+    }
+  }
+}
+
+.btn-default{
+	&:hover{
+		color: fade(@black, 80);
+	}
+
+	&.active{
+		background-color: fade(@black, 50);
+		background-image: url('@{images-path}ns.png');
+		.box-shadow(0 2px 2px fade(@black,25) inset);
+		color: @white;
+		text-shadow: 0 1px 0 @black;
+	}
+}
+
+.btn-icon{
+  .size(34px, 27px);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: .85em;
+  .border-radius(4px);
+
+  i{
+    
+    font-size: 1.8em;
+  }
+
+
+  &:hover{
+    color: fade(@black, 80);
+  }
+
+  &.active{
+    background-color: fade(@black, 50);
+    background-image: url('@{images-path}ns.png');
+    .box-shadow(0 2px 2px fade(@black,25) inset);
+    color: @white;
+    text-shadow: 0 1px 0 @black;
+  }
+
+  /*
+  .fa-eye,
+  .fa-eye-slash,
+  */
+  &.running,
+  &.on-hold,
+  &.finished{
+    // display: inline-block;
+    text-shadow: 1px 1px 1px fade(@black, 25);
+  }
+
+  .fa-eye{
+    color: darken(mix(@blue, @cyan, 20%), 10);
+  }
+
+  &.running{
+    color: @white;
+    background-color: mix(@orange, @yellow, 90%);
+  }
+  &.on-hold{
+    color: @white;
+    background-color: mix(@yellow, @green, 20%);
+  }
+  &.finished{
+    color: @white;
+    background-color: darken(mix(@blue, @cyan, 20%), 10);
+  }
+}
+
+.btn-black{
+  .btn-pseudo-states(fade(@white, 95), fade(@black, 70), fade(@black, 50));
+  background-image: url('@{images-path}ns.png');
+  text-shadow: -1px -1px 0 @black;
+  &:hover,
+  &:focus{
+    .transition(all .5s ease);
+               color: fadein(@white, 30);
+    background-color: fade(@black, 95);
+        border-color: fade(@black, 70);
+  }
+}
+
+// Botones de activación de estudios
+// ---------------------------------
+.btn-label{
+  min-width: 100px;
+}
+
+.btn-action{
+  min-width: 50px;
+}
+
+.btn-jumbo{
+  padding: @font-size-base @font-size-base*3;
+  i{font-size: 48px}
+}
+
+.btn-large{
+  .btn-lg;
+}
+
+.btn-link:hover,
+.btn-link:active{
+  text-decoration: none !important;
+}

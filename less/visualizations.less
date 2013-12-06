@@ -1,0 +1,659 @@
+// Visualizations
+
+///////////////////////////////////////////////////////////// Elementos del Reporte
+.vis-title-title{
+	text-transform: uppercase;
+	// margin: @line-height-computed*2 0 0 0;
+}
+
+div.abstract{
+	.blackboard;
+	font-family: SourceSansProLight;
+	background-image: url('@{images-path}ns.png');
+	background-color: fade(@black, 75%);
+	.box-shadow(0 0 10px @black inset);
+	.border-radius(1ex);
+	margin-bottom: 20px;
+	.row{
+		padding: @lh*1.3 0 @lh*.6;
+	}
+	.col-md-4{
+		//padding: 20px;
+		.jumbotron{
+			font-family: SourceSansProExtraLight;
+			font-size: 60px;
+			line-height: 40px;
+		}
+		strong{color:@white}
+		small{font-size: 12px}
+		p{
+			color: fade(@white, 50%);
+			text-shadow: none;
+			&.geodata{
+				margin-top: -8px;
+				color: @white;
+			}
+		}
+		.connection-icons{
+			p{
+				margin: 0;
+			}
+		}
+	}
+
+}
+
+.elements-abstract{
+	margin: 1em;
+	p{
+		margin: 0;
+		strong{color: @white;}
+	}
+}
+
+.legend-element{
+	display: inline-block;
+	.border-radius(10px);
+    height: 20px;
+    margin-right: 8px;
+    width: 20px;
+    margin-bottom: -5px;
+}
+
+ul.abstract{
+
+	margin-left: 0;
+	padding-left: 0;
+	font-size: 110%;
+	font-family: SourceSansProLight;
+	strong{font-family: SourceSansProSemibold}
+
+	li{
+		display: inline-block;
+		white-space: nowrap;
+		background-color: fade(@white, 70);
+		padding: 5px 10px 5px 0;
+		margin: 0 3px 6px 0;
+		list-style-type: none;
+		line-height: 28px;
+		outline: 1px solid fade(@border-color, 50);
+		.border-radius(3px);
+
+		i {
+			color: @link-color;
+			width: 20px;
+			margin: 0 8px;
+		}
+	}
+}
+
+.actions{
+
+	a{
+		margin-left: 5px;
+		color: @gray;
+		&:hover{
+			color: @link-color;
+			text-decoration: none;
+		}
+	}
+}
+
+// Nav-Pills para TimeBarChart 
+
+.tiny{
+
+  &.nav-pills{
+    display: inline-block;
+    margin: 7px 0 0 14px;
+    text-transform: uppercase;
+    font-family: SourceSansProBold;
+  }
+
+  &.nav-pills > li > a{
+    padding: 3px 6px 2px;
+    font-size: 12px;
+    color: @gray;
+    &:hover{
+      background-color: @gray-light;
+      color: @white;
+    }
+  }
+  &.nav-pills > li.active > a{
+    background-color: fade(@black, 70);
+    color: @white;
+  }
+}
+
+td.actions{text-align: right;}
+div.actions:last-child,
+td.actions:last-child{
+	padding-right: 10px;
+}
+
+.tab-content {
+	overflow: hidden;
+}
+
+
+// Breadcrumbs
+// -----------
+
+h2{
+	span.breadcrumb{
+		padding: 0 !important;
+  		margin: 0 !important;
+
+		ul.breadcrumb{
+			margin: 0;
+  			padding: 0;
+			list-style: none;
+			font-size: 24px;
+
+			i {
+			  font-size: 14px;
+			  color: @gray-light;
+			  vertical-align: middle;
+			  margin: 0 10px;
+			}
+
+			li {
+				display: inline-block;
+				text-shadow: 0 1px 0 @white;
+			
+				a{
+					text-transform: capitalize;
+				    color: @link-color;
+
+				    &.active{
+				      font-family: SourceSansProBold;
+				    }
+				
+				    &:hover{
+				      text-shadow: 0px 0px 2px @white;
+				    }
+				}
+			}
+
+			.divider {
+			    padding: 0 5px;
+			    color: @gray-light;
+			}
+			
+			.active a {
+			    color: @gray-dark;
+			}
+	  	}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////// Contenedor de la Visualización
+
+.visualization{
+	
+	background-color: @white;
+	.border-radius(4px);
+	.box-shadow(1px 1px 3px fade(@black, 40%));
+	.clearfix;
+	
+	.meta{
+
+		border-radius: 4px 4px 0 0;
+		.clearfix;
+	}
+
+	.content{
+		padding: 0;
+		.border-radius(0 0 4px 4px);
+	}
+}
+
+
+///////////////////////////////////////////////////////////////////////  Time Range
+
+#timeslider .background{
+	fill: @white;
+}
+
+.side-handler {
+	fill: @black;
+	cursor: ew-resize;
+}
+
+.center-handler {
+	fill: @black;
+	fill-opacity: .4;
+	cursor: move;
+}
+
+.timeslider {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.timerange-label {
+	text-align: right;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.timerange-label-date {
+	display: inline-block;
+	//width: 5em;
+	color: @black;
+	font-family: SourceSansProBold;
+}
+
+
+///////////////////////////////////////////////// Controles del Mapa de Intensidad
+
+.controls-map{
+	margin: 2ex 2ex 0 0;
+	display: inline-block;
+
+	.radios{
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 5px;
+	}
+
+	input[type="text"]{
+		margin-left: 1em;
+	}
+	
+	button{
+		margin: 0 0 0 -1px !important;
+	}
+}
+
+.map-placeholder{
+	min-height: 450px;
+}
+
+.positive-bk{
+	background-color: @positive-color; 
+	fill: @positive-color;
+}
+.neutral-bk{
+	background-color: @neutral-color;
+	fill: @neutral-color;
+}
+.negative-bk{
+	background: @negative-color;
+	fill: @negative-color;
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////// CitisentVis
+
+#bubble,
+#barchart,
+#timebarchart{
+	.positive {
+		background-color: @positive-color;
+		fill:  @positive-color;
+		color: @positive-color;
+	}
+
+	.neutral {
+		background-color: @neutral-color;
+		fill:  @neutral-color;
+		color: @neutral-color;
+	}
+
+	.negative {
+		background-color: @negative-color;
+		fill:  @negative-color;
+		color: @negative-color;
+	}
+}
+
+svg .phantom {
+	fill: rgba(0, 0, 0, 0);
+	stroke-width: 0;
+}
+
+svg .phantom.highlight {
+	stroke: rgba(0, 0, 0, 1);
+	stroke-width: 2px;
+}
+
+svg, rect .background {
+	fill: transparent;
+}
+
+svg .parent {
+	cursor: pointer;
+}
+
+////////////////////////////////////////////////////////////////////////////////// Elementos del Estudio
+
+#element-graph{
+	
+	.positive {
+		background-color: @positive-color;
+		fill: none !important;
+	}
+
+	.neutral {
+		background-color: @neutral-color;
+		fill: none !important;
+	}
+
+	.negative {
+		background-color: @negative-color;
+		fill: none !important;
+
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////// BubbleChart
+
+#bubble{
+	.bubble-center{
+		fill-opacity: .7;
+	}
+}
+
+div .bubblechart {
+	margin: 0px;
+	padding: 0px;
+}
+
+div .tooltip-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: SourceSansProBold;
+}
+
+p .tooltip-content {
+	font-size: 8px;
+}
+
+svg .bubble-center {
+	fill: @white;
+}
+
+// BubbleChart Tooltip
+
+.bubbletooltip {
+	position: absolute;
+	width: 220px;
+	height: auto;
+	font-size: 80%;
+	padding: 5px 16px;
+	text-align: center;
+	background-color: fade(@white, 90);
+	border: 1px solid @gray-light;
+	.border-radius(1ex);
+	.box-shadow(@default-shadow);
+	pointer-events: none;
+	.positive,
+	.negative,
+	.neutral{background-color: transparent !important}
+}
+
+.bubbletooltip.hidden {
+	display: none;
+}
+
+//////////////////////////////////////////////////////////////////////////////////  BarChart 
+
+.barchart-tooltip {
+	.bubbletooltip;
+}
+
+.barchart-tooltip.hidden {
+	display: none;
+}
+
+.barchart-item {
+	width: 100%;
+	margin: 0;
+	padding-top: 5px;
+	min-height: 48px;
+	vertical-align: middle;
+	text-align: center;
+	border-top: 1px solid rgba(0, 0, 0, .1);
+	
+	&:last-child{
+		border-bottom: 1px solid rgba(0, 0, 0, .1);
+	}
+}
+
+.barchart-chart {
+	display: inline-block;
+	vertical-align: inherit;
+	width: 70%;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+.barchart-label {
+	display: inline-block;
+	vertical-align: inherit;
+	width: 25%;
+	padding: 0 4px 4px 4px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	text-align: left;
+}
+
+.barchart-label.parent {
+	cursor: pointer;
+}
+
+.barchart-label.child {
+	cursor: default;
+}
+
+.barchart-text {
+	font-family: SourceSansProRegular;
+	display: inline-block;
+	vertical-align: inherit;
+	text-align: left;
+	font-size: @font-size-base;
+	text-transform: capitalize;
+	white-space: nowrap;
+  	// width: 100%;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.barchart-icon {
+	display: inline;
+	width: 12px;
+	padding-left: 4px;
+	
+	i{
+		font-size: 11px;
+		color: @gray-light;
+		&:hover{
+			color: @black;
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////// TimeChart
+
+.timebarchart-tooltip {
+	.bubbletooltip;
+}
+
+.timebarchart-tooltip.hidden {
+	display: none;
+}
+
+.timebarchart-item {
+	.barchart-item;
+}
+
+.timebarchart-chart {
+	.barchart-chart;
+}
+
+/*
+.timebarchart{
+	height: 55px;
+}*/
+
+.timebarchart-label {
+	.barchart-label;
+}
+
+.timebarchart-label.parent {
+	cursor: pointer;
+}
+
+.timebarchart-label.child {
+	cursor: default;
+}
+
+.timebarchart-text {
+	.barchart-text;
+}
+
+.timebarchart-icon {
+	.barchart-icon;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////// NetworkChart
+
+#network .node {
+    fill: @blue-light;
+    stroke-width: 1px;
+    stroke: @blue;
+}
+#network .highlight {
+    fill: lighten(@blue-light, 20);
+    stroke-width: 2px;
+}
+#network .edge {
+	stroke: @blue;
+    stroke-width: 1px;
+}
+#network .edge-inpath {
+    stroke: darken(@blue, 20);
+    stroke-width: 4px;
+}
+#network .inpath {
+    fill: @blue;
+    stroke: darken(@blue, 20);
+    stroke-width: 2px;
+}
+#network .node-active {
+    fill: @link-color;
+    stroke-width: 2px;
+    stroke: darken(@link-color, 20);
+}
+#network .network-tooltip {
+    .bubbletooltip;
+    font-family: SourceSansProBold;
+    width: 80px;
+}
+
+#network .network-tooltip.hidden {
+    display: none;
+}
+
+////////////////////////////////////////////////////////////////////////////////// TopicList
+
+
+#topiclist{
+	h4{
+		font-family: SourceSansProBold;
+		color: @link-color;
+		font-size: 22px;
+	}
+
+	h5{
+		font-family: SourceSansProSemibold;
+		text-transform: uppercase;
+		color: @gray;
+		font-size: 13px;
+		margin: 1em 0;
+	}
+	
+	.related:first-child{margin-top: 10px;}
+
+	.related-item {
+    	margin-bottom: 4px;
+	}
+
+
+	.related-item .related-label {
+	    // background-color: @white;
+	    // border-radius: 3px 3px 3px 3px;
+	    display: inline-block;
+	    height: 25px;
+	    padding: 0 5px;
+	    position: relative;
+	    vertical-align: middle;
+	    min-width: 45%;
+	    // box-shadow: 0 0 3px fade(@black, 30);
+	    font-family: SourceSansProBold;
+	    line-height: 27px;
+	    text-align: right;
+	}
+
+	.related-item .related-chart {
+	    display: inline-block;
+	    height: 25px;
+	    margin: 0 0 0 4px;
+	    position: relative;
+	    vertical-align: middle;
+	}
+
+	.related-item .related-bar {
+	    fill: @blue;
+	}
+
+	.post-item {
+	    background-color: @white;
+	    border-radius: 5px 5px 5px 5px;
+	    margin-bottom: 5px;
+	    padding: 5px 5px 5px 10px;
+	    box-shadow: 0 0 3px fade(@black, 30);
+
+	    b{
+	    	font-family: SourceSansProBold;
+	    	font-weight: normal;
+	    }
+	}
+
+	.post-item .post-content {
+		font-family: SourceSansProLight
+	}
+}
+
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+	.blackboard #element_graph svg {
+		margin: -40px 0 -55px -40px;
+	}
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+	div.abstract .row .col-md-4{
+		.tcenter;
+	}
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+

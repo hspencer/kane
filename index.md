@@ -3,65 +3,65 @@ layout: standard
 title: Kane
 ---
 
-<div class="page-header">
-  <h1>Example page header <small>Subtext for header</small></h1>
+<div class='row marketing'>
+  <div class="col-md-7">
+    <div class="page-header">
+      <h1 class='huge title'><span class='black'>CitiSent</span> <strong class='uc'>{{ page.title }}</strong> <small >LESS is more</small></h1>
+  </div>
+  <p>
+      <strong class='big cyan uc'>Kane</strong> es la interfaz de <a class='bold' href='http://www.citisent.com'>CitiSent</a>, construido a partir de <a href='http://www.getbootstrap.com'>Bootstrap</a> y <a href='http://www.fontaesome.io'>Font Awesome</a>. Kane está considerada como una de las obras maestras de la historia del cine, siendo particularmente alabada por su innovación en la música, la fotografía y la estructura narrativa.
+  </p>
+  <a href='http://www.github.com/citisent/kane' class='btn btn-black'>Ver en Github</a>
+</div>
+<div class="col-md-5 center">
+    <img class="img-circle" src="{{ site.baseurl }}/img/kane.jpg">
+</div>
 </div>
 
 
-<h1 class='huge thin title'><span class='orange'>CitiSent</span> {{ page.title }}</h1>
-
 <div class='row'>
-  <div class='col-md-8'>
-    <div class="jumbotron well">
-      <h1>Hello, world!</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
-    </div>
-  </div>
-  <div class='col-md-4'>
-    <ul class="list-group">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
 
-  </div>
+  <div class='col-sm-4'>
+    <h3 class='big air-bottom orange'>Independiente</h3>
+    <p>Con Citisent puedes identificar patrones y temas emergentes a partir de miles de datos, con un alto valor para la toma de decisiones estratégicas en tu organización o investigación.</p>
+    <ul class='features'>
+      <li><i class='fa fa-check'></i>Rastrea temas importantes para tu organización: tú defines el problema y cómo mirarlo, nosotros te entregamos las herramientas para recopilar y procesar la información</li>
+      <li><i class='fa fa-check'></i>Realiza estudios longitudinales a partir del análisis de grandes cantidades de datos</li>
+      <li><i class='fa fa-check'></i>Identifica temas emergentes en torno a tus intereses</li>
+  </ul>
 </div>
 
+<div class='col-sm-4'>
+    <h3 class='big air-bottom blue'>Extensible</h3>
+    <p>Citisent te entrega un panel de reportes navegable que te donde podrás visualizar tus hallazgos y difundirlos en tu organización de una manera rápida, dinámica y eficiente. </p>
+    <ul class='features'>
+      <li><i class='fa fa-check'></i>Embebe reportes completamente navegables en tu página web o blog y comparte tus estudios con tu comunidad</li>
+      <li><i class='fa fa-check'></i>Accede y descarga directamente tus datos para que realices estudios posteriores</li>
+      <li><i class='fa fa-check'></i>Obtén acceso directo a tu stream de datos mediante API keys de cada estudio que creas</li>
+  </ul>
+</div>
+
+<div class='col-sm-4'>
+    <h3 class='big air-bottom green-light'>Limpio</h3>
+    <p>Te invitamos a colaborar con una comunidad de investigadores en un espacio abierto de información, potenciando el valor y la inteligencia de la comunidad.</p>
+    <ul class='features'>
+      <li><i class='fa fa-check'></i>Elige publicar y disponibilizar tus estudios, tus datos y tus reportes con otros usuarios de Citisent</li>
+      <li><i class='fa fa-check'></i>Colabora con otros investigadores y comparte tus componentes para construir y recombinar nuevos estudios validados por una curatoría colectiva</li>
+  </ul>
+</div>
+</div>
+
+<hr>
+
 <div class='row'>
-  <div class='col-md-6'>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-  </div>
-  <div class='col-md-6'>
-    <ul>
-     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-     <li>Aliquam tincidunt mauris eu risus.</li>
-     <li>Vestibulum auctor dapibus neque.</li>
-   </ul>
-   
-   <h3>Un título de Tercer Nivel</h3>
-   <form role="form">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" id="exampleInputFile">
-      <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Check me out
-      </label>
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
-</div> 
+    <div class='col-md-1 col-md-offset-1'> <i class='fa fa-4x cs-icon-study'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-source'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-topic'></i></div>  
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-place'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-barchart'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-bublechart'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-user'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-config'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-brain'></i></div> 
+    <div class='col-md-1'> <i class='fa fa-4x cs-icon-branch'></i></div> 
 </div>
