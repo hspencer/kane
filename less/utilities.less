@@ -158,7 +158,7 @@ a.logo-footer{
 	
 	.loading-animation{
 		height: @navbar-height ;
-		background-image: url('@{assetsPath}loading-standard.gif');
+		background-image: url('@{images-path}loading-standard.gif');
 		background-position: center bottom;
 		background-repeat: repeat-x;
 	}
@@ -175,7 +175,7 @@ a.logo-footer{
 	height: 30px;
 	margin: 21px 0 0 -250px; // calza con la base del navbar
 	background-color: transparent;
-	background-image: url('@{assetsPath}loading-overlay.gif');
+	background-image: url('@{images-path}loading-overlay.gif');
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
@@ -184,7 +184,7 @@ a.logo-footer{
 #loading-mini{
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-image: url('@{assetsPath}loading-mini.gif');
+	background-image: url('@{images-path}loading-mini.gif');
 }
 
 
@@ -369,10 +369,16 @@ p.notice{
 .show-grid{
 	.row{
 		margin-bottom: @line-height-computed;
+		.box-shadow(-1px -1px 0 fade(@black, 3) 1px 1px 0 fade(@white, 50));
 		[class*="col-"]{
 			font-family: SourceSansProLight;
 			background-color: @white;
-			outline: 1px solid fade(@cyan, 40);
+			outline: 1px solid fade(@black, 6);
+			padding: @line-height-computed/2 0;
+			span{
+				margin: 5px;
+				font-size: 11px;
+			}
 		}
 	}
 }
