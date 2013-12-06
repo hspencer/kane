@@ -78,6 +78,21 @@ title: Grilla y Tipografía
 		<div class="col-xs-6">.col-xs-6</div>
 		<div class="col-xs-6">.col-xs-6</div>
 	</div>
-
-
 </div>
+
+<h3>Íconos</h3>
+<h4>CitiSent Set</h4>
+<div class='row'>
+<div class='col-md-1 col-md-offset-1'> <i class='fa fa-4x cs-icon-study'></i><span class='codename'>cs-icon-study</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-source'></i><span class='codename'>cs-icon-source</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-topic'></i><span class='codename'>cs-icon-topic</span></div>  
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-place'></i><span class='codename'>cs-icon-plac</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-barchart'></i><span class='codename'>cs-icon-barchart</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-bublechart'></i><span class='codename'>cs-icon-bublechart</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-user'></i><span class='codename'>cs-icon-user</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-config'></i><span class='codename'>cs-icon-config</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-brain'></i><span class='codename'>cs-icon-brain</span></div> 
+<div class='col-md-1'> <i class='fa fa-4x cs-icon-branch'></i><span class='codename'>cs-icon-branch</span></div> 
+</div>
+<h4>Font Awesome</h4>
+{% include font-awesome.html %}

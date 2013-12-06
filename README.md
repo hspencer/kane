@@ -1,4 +1,4 @@
 Kane
 ====
 
-CitiSent Kane: CitiSent's graphical user interface
+CitiSent Kane: El mejor del pueblo. Pase por acá: http://citisent.github.io/kane/
