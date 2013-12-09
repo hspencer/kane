@@ -35,6 +35,14 @@
   }
 }
 
+
+/* for all buttons */
+.btn{
+   text-shadow: 1px 1px 0 fade(@black, 10);
+}
+
+
+
 .btn-default{
 	&:hover{
 		color: fade(@black, 80);
@@ -75,14 +83,9 @@
     text-shadow: 0 1px 0 @black;
   }
 
-  /*
-  .fa-eye,
-  .fa-eye-slash,
-  */
   &.running,
   &.on-hold,
   &.finished{
-    // display: inline-block;
     text-shadow: 1px 1px 1px fade(@black, 25);
   }
 
@@ -105,7 +108,7 @@
 }
 
 .btn-black{
-  .btn-pseudo-states(fade(@white, 95), fade(@black, 70), fade(@black, 50));
+  .btn-pseudo-states(fade(@white, 95), fade(@black, 80), fade(@black, 50));
   background-image: url('@{images-path}ns.png');
   text-shadow: -1px -1px 0 @black;
   &:hover,
@@ -119,6 +122,7 @@
 
 // Botones de activación de estudios
 // ---------------------------------
+
 .btn-label{
   min-width: 100px;
 }

@@ -25,134 +25,159 @@ title: Formularios y botones
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-default">Default XS</button>
+				<button type="button" class="btn btn-xs btn-default active">Default XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-default">Default SM</button>
+				<button type="button" class="btn btn-sm btn-default active">Default SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-default">Default MD</button>
+				<button type="button" class="btn btn-md btn-default active">Default MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-default">Default LG</button>
+				<button type="button" class="btn btn-lg btn-default active">Default LG</button>
 			</td>
 		</tr>
 		<!-- Success button -->
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-success">Success XS</button>
+				<button type="button" class="btn btn-xs btn-success active">Success XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-success">Success SM</button>
+				<button type="button" class="btn btn-sm btn-success active">Success SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-success">Success MD</button>
+				<button type="button" class="btn btn-md btn-success active">Success MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-success">Success LG</button>
+				<button type="button" class="btn btn-lg btn-success active">Success LG</button>
 			</td>
 		</tr>
 		<!-- Info button -->
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-info">Info XS</button>
+				<button type="button" class="btn btn-xs btn-info active">Info XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-info">Info SM</button>
+				<button type="button" class="btn btn-sm btn-info active">Info SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-info">Info MD</button>
+				<button type="button" class="btn btn-md btn-info active">Info MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-info">Info LG</button>
+				<button type="button" class="btn btn-lg btn-info active">Info LG</button>
 			</td>
 		</tr>
 		<!-- Warning button -->
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-warning">Warning XS</button>
+				<button type="button" class="btn btn-xs btn-warning active">Warning XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-warning">Warning SM</button>
+				<button type="button" class="btn btn-sm btn-warning active">Warning SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-warning">Warning MD</button>
+				<button type="button" class="btn btn-md btn-warning active">Warning MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-warning">Warning LG</button>
+				<button type="button" class="btn btn-lg btn-warning active">Warning LG</button>
 			</td>
 		</tr>
 		<!-- Danger button -->
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-danger">Danger XS</button>
+				<button type="button" class="btn btn-xs btn-danger active">Danger XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-danger">Danger SM</button>
+				<button type="button" class="btn btn-sm btn-danger active">Danger SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-danger">Danger MD</button>
+				<button type="button" class="btn btn-md btn-danger active">Danger MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-danger">Danger LG</button>
+				<button type="button" class="btn btn-lg btn-danger active">Danger LG</button>
 			</td>
 		</tr>
 		<!-- Black button -->
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-black">Black XS</button>
+				<button type="button" class="btn btn-xs btn-black active">Black XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-black">Black SM</button>
+				<button type="button" class="btn btn-sm btn-black active">Black SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-black">Black MD</button>
+				<button type="button" class="btn btn-md btn-black active">Black MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-black">Black LG</button>
+				<button type="button" class="btn btn-lg btn-black active">Black LG</button>
 			</td>
 		</tr>
 		<!-- Link button -->
 		<tr>
 			<td class='tcenter'>
 				<button type="button" class="btn btn-xs btn-link">Link XS</button>
+				<button type="button" class="btn btn-xs btn-link active">Link XS</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-sm btn-link">Link SM</button>
+				<button type="button" class="btn btn-sm btn-link active">Link SM</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-md btn-link">Link MD</button>
+				<button type="button" class="btn btn-md btn-link active">Link MD</button>
 			</td>
 
 			<td class='tcenter'>
 				<button type="button" class="btn btn-lg btn-link">Link LG</button>
+				<button type="button" class="btn btn-lg btn-link active">Link LG</button>
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-<h4 class='bold'>Botones activos</h4>
-<button type="button" class="btn btn-primary btn-lg active">Primary button</button>
-<button type="button" class="btn btn-default btn-lg active">Button</button>
 <hr>
 
 <h2 class='bold orange'>Formularios</h2>
