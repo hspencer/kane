@@ -19,8 +19,7 @@ font-awesome: bower_components/font-awesome
 
 # Project Settings
 kane: 
-    version: 0.0.1
-    minor_version: 0.0
+    version: 0.2
     license: The Artistic License 2.0
     author:
         name: Herbert Spencer
