@@ -1,0 +1,181 @@
+
+
+#barchart{
+    .cf;
+    border: 1px solid fade(@gray, 20);
+    .box-shadow(@default-shadow);
+    .border-radius(3px);
+}
+
+.polarity-chart-item {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    //background-color: fade(@black, 2);
+    .border-radius(3px);
+}
+
+@intentation-gradient-width: 20px;
+@indentation-step: @intentation-gradient-width/5;
+@row-height: 80px;
+
+.polarity-chart-row {
+    float: left;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid fade(@gray, 20);
+    &:hover{
+        background-color: fade(@white, 40);
+    }
+
+    /* indentation gradient */
+    #gradient > .horizontal-three-colors(fade(@black, 40), fade(@black, 15), 90%, transparent);
+    background-position: -@intentation-gradient-width 0;
+    background-size: @intentation-gradient-width @row-height;
+    background-repeat: repeat-y;
+}
+
+.polarity-children,
+.polarity-chart-item{
+    width: 100%;
+}
+
+.polarity-children .polarity-chart-item{
+    background-color: fade(@black, 5);
+}
+
+.polarity-children{
+    #gradient > .vertical-three-colors(fade(@black, 10), fade(@black, 5), 20%, transparent);
+    background-size: @intentation-gradient-width @row-height/10;
+    background-repeat: repeat-x;
+}
+
+/* barchart children intentation */
+
+.polarity-chart-item .polarity-children .polarity-chart-item {
+    .polarity-chart-row{background-position: -@intentation-gradient-width + @indentation-step * 1 0}
+    .polarity-children .polarity-chart-item {
+        .polarity-chart-row{background-position: -@intentation-gradient-width + @indentation-step * 2 0}
+        .polarity-children .polarity-chart-item {
+            .polarity-chart-row{background-position: -@intentation-gradient-width + @indentation-step * 3 0}
+            .polarity-children .polarity-chart-item {
+                .polarity-chart-row{background-position: -@intentation-gradient-width + @indentation-step * 4 0}
+                .polarity-children .polarity-chart-item {
+                    .polarity-chart-row{background-position: -@intentation-gradient-width + @indentation-step * 5 0}
+                }
+            }
+        }
+    }
+}
+
+.polarity-chart {
+    float: left;
+    width: 70%;
+    height: @row-height;
+    border: 0;
+    margin: 0;
+
+    // no information for this item
+    p {
+        display: block;
+        text-align: center;
+        margin: 28px 0 0 0 !important;
+        color: fade(@gray, 50);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+
+@sign-width: 15px;
+
+.polarity-label {
+    float: left;
+    width: 30%;
+    max-width: 250px;
+    cursor: pointer;
+    height: @row-height;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    
+    // label
+    p{
+        display: inline-block;
+        padding-left: .6ex;
+        padding-top: 1ex;
+        line-height: 90%;
+        margin-left: @sign-width;
+    }
+    &.has-children{
+        p{
+            font-family: SourceSansProBold;
+            &::before,
+            &::after{
+                display: inline-block;
+                width: @sign-width;
+                margin-left: -@sign-width;
+            }
+            &::before{
+                margin-top: 5px;
+                text-align: center;
+            }
+        }
+
+        &.polarity-closed{
+                color: fade(@black, 70);
+            p::before{
+                font-family: FontAwesome;
+                content: @fa-var-caret-right;
+                color: @black;
+            }
+        }
+
+        &.polarity-open{
+            color: @black;
+            p::before{
+                font-family: FontAwesome;
+                content: @fa-var-caret-down;
+                color: @link-color;
+            }
+        }
+    }
+
+    &:hover{
+        color: @link-color;
+    }
+}
+
+.polarity-children {
+    p{margin: 0 0 0 @sign-width}
+    float: left;
+}
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+    .polarity-chart,
+    .polarity-label{
+        float: none;
+        width: 100%;
+    }
+    .polarity-label{
+        height: @row-height * .6;
+    }
+    .polarity-chart{
+        text-align: center;
+    }
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}

@@ -1,0 +1,66 @@
+
+// General Settings
+// ----------------
+
+// Colors
+// ------
+
+
+// Orbits
+// ------
+
+@orb-col: #e3f1b1;
+@orbit-color: #a9dba1;
+@orbit-dash-array: 3 3;
+
+@node-color-empty: @orb-col;
+
+// node color 'has children'
+@node-color-open: @orb-col;
+@node-color-open-hover: darken(@orb-col, 5);
+@node-color-closed: spin(@orb-col, -15);
+@node-color-closed-hover: darken(@node-color-closed, 9);
+
+@node-stroke-color: darken(@orbit-color, 10);
+@node-stroke-color-hover: darken(@node-stroke-color, 20);
+
+// Chart Axis
+// ----------
+
+.axis path, line {
+    fill: none;
+    stroke: @gray-dark;
+    shape-rendering: crispEdges;
+}
+
+.x-axis {
+    font-size: 10px;
+}
+
+.y-axis {
+    font-size: 9px;
+}
+
+// Polarity Chart
+// --------------
+
+.positive {
+    fill: @positive-color;
+}
+
+.negative {
+    fill: @negative-color;
+}
+
+.neutral {
+    fill: @neutral-color;
+}
+
+
+
+// Polarity Bars
+.polarity-bar {
+    stroke: #fff;
+    stroke-opacity: 0.8;
+    stroke-width: 0.5px;
+}   

@@ -146,6 +146,12 @@ p.bio{
 }
 
 
+.well-well{
+	.box-shadow(0 0 3px @white inset);
+	background-color: @white !important;
+	.border-radius(16px);
+}
+
 // Responsive 
 // ----------
 
@@ -195,7 +201,7 @@ p.bio{
 		ul{
 			background-color: fade(@white, 88);
    			padding: 3px;
-   			.border-radius(50%);
+   			.border-radius(@border-radius-base);
 
 			li,
 			li.air-left,
@@ -207,14 +213,6 @@ p.bio{
 			}
 		}
 	}
-
-
-	.well-well{
-		.box-shadow(0 0 3px @white inset);
-		background-color: @white;
-		.border-radius(16px);
-	}
-
 }
 
 // Small screen / tablet

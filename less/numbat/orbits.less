@@ -1,0 +1,84 @@
+
+#orbits{
+    svg{
+        border: 1px solid @gray-light;
+        //.border-radius(@border-radius-base);
+        .box-shadow(@default-shadow);
+    }
+}
+
+// Orbit Background
+.orbit-background {
+    fill: fade(@white, 60);
+    stroke: none;
+}
+
+
+// Orbit Path
+.orbit-path {
+    fill: none;
+    stroke: @orbit-color;
+    stroke-dasharray: @orbit-dash-array;
+}
+
+// Orbit Node
+.orbit-node {
+    fill: @node-color-empty;
+    stroke: lighten(@node-stroke-color, 15);
+    stroke-opacity: 0.5;
+
+    &.orbit-has-children {
+        stroke: darken(desaturate(@node-stroke-color, 10), 15);
+        stroke-width: 2px;
+        cursor: pointer;
+
+        &.orbit-node-open{
+            fill: @node-color-open;
+            stroke-width: .5px;
+            &:hover{
+                fill: @node-color-open-hover;
+            }
+        }
+
+        &.orbit-node-closed{
+            fill: @node-color-closed;
+            &:hover{
+                fill: @node-color-closed-hover;
+            }
+        }
+    }
+}
+
+.orbit-label {
+    fill: #000;
+    stroke: @white;
+    stroke-width: 4px;
+    stroke-linejoin: round;
+    stroke-opacity: 0.45;
+    text-anchor: middle;
+    font-size: 12px;
+    pointer-events: none;
+
+    &.orbit-label-depth-0{
+        font-size: 16px;
+    }
+    &.orbit-label-depth-1{
+        font-size: 14px;
+    }
+    &.orbit-label-depth-2{
+        font-size: 12px;
+    }
+    &.orbit-label-depth-3{
+        font-size: 12px;
+    }
+    &.orbit-label-depth-4{
+        font-size: 12px;
+    }
+    &.orbit-label-depth-5{
+        font-size: 10px;
+    }
+    &.orbit-label-depth-6{
+        font-size: 10px;
+    }
+
+}

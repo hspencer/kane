@@ -12,6 +12,9 @@ less:
 
 css: less
 
+local:
+	jekyll server --watch --baseurl= --port=4444
+
 dist: less
 	cp -R bower_components/font-awesome/fonts .
 	cp bower_components/bootstrap/dist/js/bootstrap.min.js js

@@ -92,7 +92,7 @@ title: Estudios
             <td>
                 <span class='btn btn-icon'><i class='fa fa-eye-slash gray'></i></span>
                 <span class='btn btn-icon running' title='Iniciado'>
-                    <i class='fa fa-cog fa-spin'></i>
+                    <i class='fa fa-youtube-play'></i>
                 </span>
             </td>
 
@@ -124,7 +124,7 @@ title: Estudios
             <td>
                 <span class='btn btn-icon'><i class='fa fa-eye-slash gray'></i></span>
                 <span class='btn btn-icon running' title='Iniciado'>
-                    <i class='fa fa-cog fa-spin'></i>
+                    <i class='fa fa-youtube-play'></i>
                 </span>
             </td>
 
@@ -314,7 +314,7 @@ title: Estudios
     <td>
         <span class='btn btn-icon'><i class='fa fa-eye'></i></span>
         <span class='btn btn-icon running' title='Iniciado'>
-           <i class='fa fa-cog fa-spin'></i>
+           <i class='fa fa-youtube-play'></i>
        </span>
    </td>
    <td class='center-vertical'>

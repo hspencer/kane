@@ -39,3 +39,31 @@
   -o-transition: @transition;
   transition: @transition;
 }
+
+// for the bundle blocks
+.bundle-block(@col){
+  @thick: 3px;
+  .border-radius(@thick);
+  border: @thick solid fade(@col, 40);
+
+  .bundle-name{
+    color: saturate(@col, 10);
+  }
+
+  div a.btn-buy{
+    background-color: @col;
+    color: contrast(@col, @black, @white, 43%);
+    text-shadow: 2px 2px 1px fade(@black, 30);
+    border: 1px solid fade(@black, 10);
+    color: @white;
+    .btn-block;
+
+    &:hover{
+      background-color: saturate(darken(@col, 10), 10)
+    }   
+  }
+
+  &:hover{
+    border: @thick solid @col;
+  }
+}

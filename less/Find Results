@@ -1,0 +1,822 @@
+Searching 25 files for "dropdown"
+
+/Users/hspencer/Sites/citisent/kane/less/kane.less:
+   43  @import '@{bootstrap-less-path}component-animations.less';
+   44  @import '@{bootstrap-less-path}input-groups.less';
+   45: @import '@{bootstrap-less-path}dropdowns.less';
+   46  @import '@{bootstrap-less-path}list-group.less';
+   47  @import '@{bootstrap-less-path}panels.less';
+
+/Users/hspencer/Sites/citisent/kane/less/sources.less:
+  145  		input[type="text"]{.nbrl;.nbrr;.nbl;.nbr;width:370px;}
+  146  		input[type="submit"]{.nbrl}
+  147: 		ul.dropdown-menu{
+  148  			position: absolute;
+  149  			top: 0;
+
+/Users/hspencer/Sites/citisent/kane/less/variables.less:
+  216  
+  217  
+  218: // Dropdowns
+  219  // ----------------------------------------------------------------------------------------------
+  220  
+  221: @dropdown-bg:                    #fff;
+  222: @dropdown-border:                rgba(0,0,0,.15);
+  223: @dropdown-fallback-border:       #ccc;
+  224: @dropdown-divider-bg:            #e5e5e5;
+  225  
+  226: @dropdown-link-active-color:     #fff;
+  227: @dropdown-link-active-bg:        @component-active-bg;
+  228  
+  229: @dropdown-link-color:            @gray-dark;
+  230: @dropdown-link-hover-color:      #fff;
+  231: @dropdown-link-hover-bg:         @dropdown-link-active-bg;
+  232  
+  233: @dropdown-link-disabled-color:   @gray-light;
+  234  
+  235: @dropdown-header-color:          @gray-light;
+  236  
+  237: @dropdown-caret-color:           #000;
+  238  
+  239  
+  ...
+  248  
+  249  @zindex-navbar:            1000;
+  250: @zindex-dropdown:          1000;
+  251  @zindex-popover:           1031;
+  252  @zindex-tooltip:           1030;
+
+17 matches across 3 files
+
+
+Searching 40 files for "dropdown"
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/bootstrap.less:
+   19  @import "component-animations.less";
+   20  @import "glyphicons.less";
+   21: @import "dropdowns.less";
+   22  @import "button-groups.less";
+   23  @import "input-groups.less";
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/button-groups.less:
+    5  // Button carets
+    6  //
+    7: // Match the button text color to the arrow/caret for indicating dropdown-ness.
+    8  
+    9  .caret {
+   ..
+   51      }
+   52      &:focus {
+   53:       // Remove focus outline when dropdown JS adds it after closing the menu
+   54        outline: none;
+   55      }
+   ..
+   84  }
+   85  
+   86: .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+   87    border-radius: 0;
+   88  }
+   ..
+   91  .btn-group > .btn:first-child {
+   92    margin-left: 0;
+   93:   &:not(:last-child):not(.dropdown-toggle) {
+   94      .border-right-radius(0);
+   95    }
+   96  }
+   97: // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+   98  .btn-group > .btn:last-child:not(:first-child),
+   99: .btn-group > .dropdown-toggle:not(:first-child) {
+  100    .border-left-radius(0);
+  101  }
+  102  
+  103: // Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+  104  .btn-group > .btn-group {
+  105    float: left;
+  ...
+  110  .btn-group > .btn-group:first-child {
+  111    > .btn:last-child,
+  112:   > .dropdown-toggle {
+  113      .border-right-radius(0);
+  114    }
+  ...
+  119  
+  120  // On active and open, don't show outline
+  121: .btn-group .dropdown-toggle:active,
+  122: .btn-group.open .dropdown-toggle {
+  123    outline: 0;
+  124  }
+  ...
+  134  
+  135  
+  136: // Split button dropdowns
+  137  // ----------------------
+  138  
+  139  // Give the line between buttons some depth
+  140: .btn-group > .btn + .dropdown-toggle {
+  141    padding-left: 8px;
+  142    padding-right: 8px;
+  143  }
+  144: .btn-group > .btn-lg + .dropdown-toggle {
+  145    padding-left: 12px;
+  146    padding-right: 12px;
+  ...
+  149  // The clickable button for toggling the menu
+  150  // Remove the gradient and set the same inset shadow as the :active state
+  151: .btn-group.open .dropdown-toggle {
+  152    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  153  
+  ...
+  186    }
+  187  
+  188:   // Clear floats so dropdown menus can be properly placed
+  189    > .btn-group {
+  190      .clearfix();
+  ...
+  221  .btn-group-vertical > .btn-group:first-child {
+  222    > .btn:last-child,
+  223:   > .dropdown-toggle {
+  224      .border-bottom-radius(0);
+  225    }
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/dropdowns.less:
+    1  //
+    2: // Dropdown menus
+    3  // --------------------------------------------------
+    4  
+    5  
+    6: // Dropdown arrow/caret
+    7  .caret {
+    8    display: inline-block;
+    .
+   11    margin-left: 2px;
+   12    vertical-align: middle;
+   13:   border-top:   @caret-width-base solid @dropdown-caret-color;
+   14    border-right: @caret-width-base solid transparent;
+   15    border-left:  @caret-width-base solid transparent;
+   ..
+   19  }
+   20  
+   21: // The dropdown wrapper (div)
+   22: .dropdown {
+   23    position: relative;
+   24  }
+   25  
+   26: // Prevent the focus on the dropdown toggle when closing dropdowns
+   27: .dropdown-toggle:focus {
+   28    outline: 0;
+   29  }
+   30  
+   31: // The dropdown menu (ul)
+   32: .dropdown-menu {
+   33    position: absolute;
+   34    top: 100%;
+   35    left: 0;
+   36:   z-index: @zindex-dropdown;
+   37    display: none; // none by default, but block on "open" of the menu
+   38    float: left;
+   ..
+   42    list-style: none;
+   43    font-size: @font-size-base;
+   44:   background-color: @dropdown-bg;
+   45:   border: 1px solid @dropdown-fallback-border; // IE8 fallback
+   46:   border: 1px solid @dropdown-border;
+   47    border-radius: @border-radius-base;
+   48    .box-shadow(0 6px 12px rgba(0,0,0,.175));
+   49    background-clip: padding-box;
+   50  
+   51:   // Aligns the dropdown menu to right
+   52    &.pull-right {
+   53      right: 0;
+   ..
+   55    }
+   56  
+   57:   // Dividers (basically an hr) within the dropdown
+   58    .divider {
+   59:     .nav-divider(@dropdown-divider-bg);
+   60    }
+   61  
+   62:   // Links within the dropdown menu
+   63    > li > a {
+   64      display: block;
+   ..
+   67      font-weight: normal;
+   68      line-height: @line-height-base;
+   69:     color: @dropdown-link-color;
+   70      white-space: nowrap; // prevent links from randomly breaking onto new lines
+   71    }
+   ..
+   73  
+   74  // Hover/Focus state
+   75: .dropdown-menu > li > a {
+   76    &:hover,
+   77    &:focus {
+   78      text-decoration: none;
+   79:     color: @dropdown-link-hover-color;
+   80:     background-color: @dropdown-link-hover-bg;
+   81    }
+   82  }
+   83  
+   84  // Active state
+   85: .dropdown-menu > .active > a {
+   86    &,
+   87    &:hover,
+   88    &:focus {
+   89:     color: @dropdown-link-active-color;
+   90      text-decoration: none;
+   91      outline: 0;
+   92:     background-color: @dropdown-link-active-bg;
+   93    }
+   94  }
+   ..
+   98  // Gray out text and ensure the hover/focus state remains gray
+   99  
+  100: .dropdown-menu > .disabled > a {
+  101    &,
+  102    &:hover,
+  103    &:focus {
+  104:     color: @dropdown-link-disabled-color;
+  105    }
+  106  }
+  107  // Nuke hover/focus effects
+  108: .dropdown-menu > .disabled > a {
+  109    &:hover,
+  110    &:focus {
+  ...
+  117  }
+  118  
+  119: // Open state for the dropdown
+  120  .open {
+  121    // Show the menu
+  122:   > .dropdown-menu {
+  123      display: block;
+  124    }
+  ...
+  130  }
+  131  
+  132: // Dropdown section headers
+  133: .dropdown-header {
+  134    display: block;
+  135    padding: 3px 20px;
+  136    font-size: @font-size-small;
+  137    line-height: @line-height-base;
+  138:   color: @dropdown-header-color;
+  139  }
+  140  
+  141  // Backdrop to catch body clicks on mobile, etc.
+  142: .dropdown-backdrop {
+  143    position: fixed;
+  144    left: 0;
+  ...
+  146    bottom: 0;
+  147    top: 0;
+  148:   z-index: @zindex-dropdown - 10;
+  149  }
+  150  
+  151: // Right aligned dropdowns
+  152: .pull-right > .dropdown-menu {
+  153    right: 0;
+  154    left: auto;
+  155  }
+  156  
+  157: // Allow for dropdowns to go bottom up (aka, dropup-menu)
+  158  //
+  159: // Just add .dropup after the standard .dropdown class and you're set, bro.
+  160  // TODO: abstract this so that the navbar fixed styles are not placed here?
+  161  
+  162  .dropup,
+  163: .navbar-fixed-bottom .dropdown {
+  164    // Reverse the caret
+  165    .caret {
+  ...
+  167      // gets fixed, restore `border-top: 0;`.
+  168      border-top: 0 dotted;
+  169:     border-bottom: @caret-width-base solid @dropdown-caret-color;
+  170      content: "";
+  171    }
+  172    // Different positioning for bottom up menu
+  173:   .dropdown-menu {
+  174      top: auto;
+  175      bottom: 100%;
+  ...
+  185  @media (min-width: @grid-float-breakpoint) {
+  186    .navbar-right {
+  187:     .dropdown-menu {
+  188:       .pull-right > .dropdown-menu();
+  189      }
+  190    }
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/input-groups.less:
+    6  // -------------------------
+    7  .input-group {
+    8:   position: relative; // For dropdowns
+    9    display: table;
+   10    border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
+   ..
+   91  .input-group-addon:first-child,
+   92  .input-group-btn:first-child > .btn,
+   93: .input-group-btn:first-child > .dropdown-toggle,
+   94: .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+   95    .border-right-radius(0);
+   96  }
+   ..
+  101  .input-group-addon:last-child,
+  102  .input-group-btn:last-child > .btn,
+  103: .input-group-btn:last-child > .dropdown-toggle,
+  104  .input-group-btn:first-child > .btn:not(:first-child) {
+  105    .border-left-radius(0);
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/mixins.less:
+  382  // Horizontal dividers
+  383  // -------------------------
+  384: // Dividers (basically an hr) within dropdowns and nav lists
+  385  .nav-divider(@color: #e5e5e5) {
+  386    height: 1px;
+  ...
+  403        border-top-color: @border;
+  404      }
+  405:     & > .dropdown .caret {
+  406        border-color: @heading-text-color transparent;
+  407      }
+  ...
+  470    &:active,
+  471    &.active,
+  472:   .open .dropdown-toggle& {
+  473      color: @color;
+  474      background-color: darken(@background, 8%);
+  ...
+  477    &:active,
+  478    &.active,
+  479:   .open .dropdown-toggle& {
+  480      background-image: none;
+  481    }
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/navbar.less:
+  216  
+  217    @media (max-width: @screen-xs-max) {
+  218:     // Dropdowns get custom display when collapsed
+  219:     .open .dropdown-menu {
+  220        position: static;
+  221        float: none;
+  ...
+  226        box-shadow: none;
+  227        > li > a,
+  228:       .dropdown-header {
+  229          padding: 5px 15px 5px 25px;
+  230        }
+  ...
+  307  
+  308  
+  309: // Dropdown menus
+  310  
+  311  // Menu position and menu carets
+  312: .navbar-nav > li > .dropdown-menu {
+  313    margin-top: 0;
+  314    .border-top-radius(0);
+  315  }
+  316  // Menu position and menu caret support for dropups via extra dropup class
+  317: .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+  318    .border-bottom-radius(0);
+  319  }
+  320  
+  321  // Right aligned menus need alt position
+  322: .navbar-nav.pull-right > li > .dropdown-menu,
+  323: .navbar-nav > li > .dropdown-menu.pull-right {
+  324    left: auto;
+  325    right: 0;
+  ...
+  415    }
+  416  
+  417:   // Dropdown menu items and carets
+  418    .navbar-nav {
+  419      // Caret should match text color on hover
+  420:     > .dropdown > a:hover .caret,
+  421:     > .dropdown > a:focus .caret {
+  422        border-top-color: @navbar-default-link-hover-color;
+  423        border-bottom-color: @navbar-default-link-hover-color;
+  424      }
+  425  
+  426:     // Remove background color from open dropdown
+  427      > .open > a {
+  428        &,
+  ...
+  437        }
+  438      }
+  439:     > .dropdown > a .caret {
+  440        border-top-color: @navbar-default-link-color;
+  441        border-bottom-color: @navbar-default-link-color;
+  ...
+  444  
+  445      @media (max-width: @screen-xs-max) {
+  446:       // Dropdowns get custom display when collapsed
+  447:       .open .dropdown-menu {
+  448          > li > a {
+  449            color: @navbar-default-link-color;
+  ...
+  552    }
+  553  
+  554:   // Dropdowns
+  555    .navbar-nav {
+  556      > .open > a {
+  ...
+  562        }
+  563      }
+  564:     > .dropdown > a:hover .caret {
+  565        border-top-color: @navbar-inverse-link-hover-color;
+  566        border-bottom-color: @navbar-inverse-link-hover-color;
+  567      }
+  568:     > .dropdown > a .caret {
+  569        border-top-color: @navbar-inverse-link-color;
+  570        border-bottom-color: @navbar-inverse-link-color;
+  ...
+  582  
+  583      @media (max-width: @screen-xs-max) {
+  584:       // Dropdowns get custom display
+  585:       .open .dropdown-menu {
+  586:         > .dropdown-header {
+  587            border-color: @navbar-inverse-border;
+  588          }
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/navs.less:
+   42    }
+   43  
+   44:   // Open dropdowns
+   45    .open > a {
+   46      &,
+   ..
+  179    }
+  180  
+  181:   > .dropdown .dropdown-menu {
+  182      top: auto;
+  183      left: auto;
+  ...
+  241  
+  242  
+  243: // Dropdowns
+  244  // -------------------------
+  245  
+  246: // Make dropdown carets use link color in navs
+  247  .nav .caret {
+  248    border-top-color: @link-color;
+  ...
+  254  }
+  255  
+  256: // Specific dropdowns
+  257: .nav-tabs .dropdown-menu {
+  258:   // make dropdown border overlap tab border
+  259    margin-top: -1px;
+  260    // Remove the top rounded corners here since there is a hard edge above the menu
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/panels.less:
+   97    .border-top-radius(@panel-border-radius - 1);
+   98  
+   99:   > .dropdown .dropdown-toggle {
+  100      color: inherit;
+  101    }
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/theme.less:
+   82  
+   83  //
+   84: // Dropdowns
+   85  // --------------------------------------------------
+   86  
+   87: .dropdown-menu > li > a:hover,
+   88: .dropdown-menu > li > a:focus {
+   89:   #gradient > .vertical(@start-color: @dropdown-link-hover-bg; @end-color: darken(@dropdown-link-hover-bg, 5%));
+   90:   background-color: darken(@dropdown-link-hover-bg, 5%);
+   91  }
+   92: .dropdown-menu > .active > a,
+   93: .dropdown-menu > .active > a:hover,
+   94: .dropdown-menu > .active > a:focus {
+   95:   #gradient > .vertical(@start-color: @dropdown-link-active-bg; @end-color: darken(@dropdown-link-active-bg, 5%));
+   96:   background-color: darken(@dropdown-link-active-bg, 5%);
+   97  }
+   98  
+   ..
+  106  .navbar-default {
+  107    #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);
+  108:   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+  109    border-radius: @navbar-border-radius;
+  110    @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+  ...
+  124  .navbar-inverse {
+  125    #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
+  126:   .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+  127  
+  128    .navbar-nav > .active > a {
+
+/Users/hspencer/Sites/citisent/kane/bower_components/bootstrap/less/variables.less:
+  168  
+  169  
+  170: // Dropdowns
+  171  // -------------------------
+  172  
+  173: @dropdown-bg:                    #fff;
+  174: @dropdown-border:                rgba(0,0,0,.15);
+  175: @dropdown-fallback-border:       #ccc;
+  176: @dropdown-divider-bg:            #e5e5e5;
+  177  
+  178: @dropdown-link-color:            @gray-dark;
+  179: @dropdown-link-hover-color:      darken(@gray-dark, 5%);
+  180: @dropdown-link-hover-bg:         #f5f5f5;
+  181  
+  182: @dropdown-link-active-color:     @component-active-color;
+  183: @dropdown-link-active-bg:        @component-active-bg;
+  184  
+  185: @dropdown-link-disabled-color:   @gray-light;
+  186  
+  187: @dropdown-header-color:          @gray-light;
+  188  
+  189: @dropdown-caret-color:           #000;
+  190  
+  191  
+  ...
+  200  
+  201  @zindex-navbar:            1000;
+  202: @zindex-dropdown:          1000;
+  203  @zindex-popover:           1010;
+  204  @zindex-tooltip:           1030;
+
+129 matches across 10 files
+
+
+Searching 25 files for "text-shadow"
+
+/Users/hspencer/Sites/citisent/kane/less/blackboard.less:
+   28  			font-family: SourceSansProLight;
+   29  			color: fade(@white, 50%);
+   30: 			text-shadow: none;
+   31  
+   32  			&.total-elements{
+   ..
+  132  		color: @white;
+  133  		font-family: SourceSansProSemiBold;
+  134: 		text-shadow: none;
+  135  		display: inline-block;
+  136  		background-color: fade(@black, 70);
+  ...
+  153  		.tag;
+  154  		font-size: 13px;
+  155: 		text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  156  		padding: 4px 9px;
+  157  		#gradient > .vertical(@red, darken(@red, 20%));
+
+/Users/hspencer/Sites/citisent/kane/less/buttons.less:
+   46  		.box-shadow(0 2px 2px fade(@black,25) inset);
+   47  		color: @white;
+   48: 		text-shadow: 0 1px 0 @black;
+   49  	}
+   50  }
+   ..
+   73      .box-shadow(0 2px 2px fade(@black,25) inset);
+   74      color: @white;
+   75:     text-shadow: 0 1px 0 @black;
+   76    }
+   77  
+   ..
+   84    &.finished{
+   85      // display: inline-block;
+   86:     text-shadow: 1px 1px 1px fade(@black, 25);
+   87    }
+   88  
+   ..
+  108    .btn-pseudo-states(fade(@white, 95), fade(@black, 70), fade(@black, 50));
+  109    background-image: url('@{images-path}ns.png');
+  110:   text-shadow: -1px -1px 0 @black;
+  111    &:hover,
+  112    &:focus{
+
+/Users/hspencer/Sites/citisent/kane/less/carousel.less:
+   75    color: @carousel-control-color;
+   76    text-align: center;
+   77:   text-shadow: @carousel-text-shadow;
+   78    // We can't have this transition here because webkit cancels the carousel
+   79    // animation if you trip this while in the middle of another animation.
+   ..
+  192    text-align: left;
+  193  
+  194:   text-shadow: @carousel-text-shadow;
+  195    & .btn {
+  196:     text-shadow: none; // No shadow for button elements in carousel-caption
+  197    }
+  198    p{
+
+/Users/hspencer/Sites/citisent/kane/less/embeds.less:
+   38    		display: inline;
+   39    		color: white;
+   40:   		text-shadow: none;
+   41    		
+   42    	}
+
+/Users/hspencer/Sites/citisent/kane/less/forms.less:
+  154  		a{
+  155  			color: @white;
+  156: 			text-shadow: 1px 1px 1px fade(@black, 80);
+  157  		}
+  158  	}
+  ...
+  274  	font-size: 23px;
+  275  	.text-overflow;
+  276: 	text-shadow: -2px -2px 1px #FFFFFF;
+  277  }
+  278  
+
+/Users/hspencer/Sites/citisent/kane/less/gamification.less:
+   71  					background-color: @green;
+   72  					color: @white;
+   73: 					text-shadow: 1px 1px 1px fade(@black, 20);
+   74  					&:hover{
+   75  						background-color: darken(@green, 5);
+
+/Users/hspencer/Sites/citisent/kane/less/navbar.less:
+   18  
+   19  			&:hover{
+   20: 				text-shadow: 0 0 4px @blue-light;
+   21  			}
+   22  		}
+
+/Users/hspencer/Sites/citisent/kane/less/pages.less:
+    6  	min-height: 150px;
+    7  	color: fade(@black, 50%);
+    8: 	text-shadow: 1px 1px 0 white;
+    9  
+   10  	a{
+   ..
+  134  		font-family: SourceSansProBold;
+  135  		color: @white;
+  136: 		text-shadow: 0 0 2px fade(@black, 40);
+  137  		padding: 5px;
+  138  		border: 1px double @green;
+
+/Users/hspencer/Sites/citisent/kane/less/sources.less:
+   90    font-size: 19px;
+   91    font-family: SourceSansProSemibold;
+   92:   text-shadow: -1px -1px 0 fade(@black, 30%);
+   93    border: 1px solid rgba(0, 0, 0, 0.05);
+   94    .border-radius(18px);
+   ..
+  198      color: @white;
+  199  
+  200:     text-shadow: 0 0 2px fade(@black, 40);
+  201    }
+  202  }
+
+/Users/hspencer/Sites/citisent/kane/less/studies.less:
+  138  				font-family: SourceSansProSemibold;
+  139  				background-color: fade(@black, 30);
+  140: 				text-shadow: 1px 1px 1px fade(@black, 40);
+  141  				color: @white;
+  142  				padding: 0 1ex;
+  ...
+  162  		.icon-bullhorn{
+  163  			color: rgba(0, 0, 0, .15);
+  164: 			text-shadow: none;
+  165  		}
+  166  		
+  ...
+  172  		.actions{
+  173  			margin-right:.5em;
+  174: 			// text-shadow: 1px 1px 0 rgba(0, 0, 0, .2), -1px -1px 0 rgba(255, 255, 255, .4);
+  175  			.action{
+  176  				&.fav{margin-right: 6px;
+  177  					.icon-star-empty{
+  178  						color: rgba(0, 0, 0, .15);
+  179: 						text-shadow: none;
+  180  						&:hover{color: rgba(90, 100, 0, .45)}
+  181  					}
+  ...
+  200  	.icon-map-marker{
+  201  		color: rgba(232, 115, 115, 1);
+  202: 		text-shadow: @default-shadow;
+  203  	}
+  204  		
+  ...
+  286  			&.positive{
+  287  				color: white;
+  288: 				text-shadow: -1px -1px 0 fade(@black, 30);
+  289  				.buttonBackground(lighten(@positive-color, 30), @positive-color);
+  290  			}
+  ...
+  292  			&.negative{
+  293  				color: white;
+  294: 				text-shadow: -1px -1px 0 fade(@black, 30);
+  295  				.buttonBackground(lighten(@negative-color, 30), @negative-color);
+  296  			}
+  ...
+  298  			&.neutral{
+  299  				color: @black;
+  300: 				text-shadow: 1px -px 0 fade(@white, 30);
+  301  				.buttonBackground(lighten(@neutral-color, 30), @neutral-color);
+  302  			}
+
+/Users/hspencer/Sites/citisent/kane/less/tables.less:
+   32        vertical-align: middle;
+   33        color: fade(@black, 50%);
+   34:       text-shadow:1px 1px 0 @white;
+   35      }
+   36  
+   ..
+   49          &.btn-success{
+   50            color: @white;
+   51:           text-shadow: 1px 1px 1px fade(@black, 60%);
+   52          }
+   53        }
+   ..
+  130      background-color: darken(@link-color, 3%);
+  131      border: 2px solid lighten(@link-color, 5);
+  132:     text-shadow: 1px 1px 2px fade(@black, 30%);
+  133      color: @white;
+  134      
+
+/Users/hspencer/Sites/citisent/kane/less/tags.less:
+   16    font-size: 14px;
+   17    font-family: SourceSansProRegular;
+   18:   text-shadow: white 1px 1px 1px;
+   19    
+   20    &.lugar{
+   ..
+   42  
+   43      &.active{
+   44:       text-shadow: 0 0 4px @white;
+   45      }
+   46      &.inactive{
+   ..
+   61    	font-family: SourceSansProSemiBold;
+   62    	background-color: @black;
+   63:   	text-shadow: none;
+   64    }
+   65    
+   ..
+   84      *, a, strong, a i{
+   85        color: white;
+   86:       text-shadow: none !important;
+   87      }
+   88    }
+   ..
+  115      background-color: fade(@black, 80);
+  116      color: white;
+  117:     text-shadow: none;
+  118    }
+  119  
+  ...
+  142    	background: none;
+  143    	border: none;
+  144:   	// text-shadow: 1px 1px 1px fade(@black, 50);
+  145    }
+  146  
+
+/Users/hspencer/Sites/citisent/kane/less/type.less:
+   23  		font-weight: normal;
+   24  		color: mix(@black, @white, 30);
+   25: 		text-shadow: 1px 1px 0 fade(@white, 70);
+   26  	}
+   27  
+   ..
+   79  		padding: 1ex 1em;
+   80  		font-family: @font-family-monospace;
+   81: 		text-shadow: -1px -1px 0 @black;
+   82  		margin-bottom: 1px;
+   83  	}
+
+/Users/hspencer/Sites/citisent/kane/less/utilities.less:
+  289  
+  290  .shadow{
+  291: 	text-shadow: @default-shadow;
+  292  }
+  293  .shadow-sharp{
+  294: 	text-shadow: 1px 1px 0 rgba(0, 0, 0, .6);
+  295  }
+  296  
+
+/Users/hspencer/Sites/citisent/kane/less/variables.less:
+  618  // Carousel
+  619  // ----------------------------------------------------------------------------------------------
+  620: @carousel-text-shadow:                        -1px -1px 1px @white;
+  621  @carousel-control-color:                      @white;
+  622  @carousel-control-width:                      8%;
+  ...
+  631  @close-color:                 #000;
+  632  @close-font-weight:           bold;
+  633: @close-text-shadow:           0 1px 0 #fff;
+  634  
+  635  
+
+/Users/hspencer/Sites/citisent/kane/less/visualizations.less:
+   29  		p{
+   30  			color: fade(@white, 50%);
+   31: 			text-shadow: none;
+   32  			&.geodata{
+   33  				margin-top: -8px;
+   ..
+  160  			li {
+  161  				display: inline-block;
+  162: 				text-shadow: 0 1px 0 @white;
+  163  			
+  164  				a{
+  ...
+  171  				
+  172  				    &:hover{
+  173: 				      text-shadow: 0px 0px 2px @white;
+  174  				    }
+  175  				}
+
+47 matches across 16 files

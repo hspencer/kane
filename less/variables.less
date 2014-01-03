@@ -12,19 +12,19 @@
 @black:                 #000;
 @white:                 #fff;
 
-@blue:                  #0C9AC2;
-@blue-dark:             darken(@blue, 15);
+@blue:                  #0C9AC2; //#0f7b8c;
+@blue-dark:             darken(@blue, 15); // #0064cd;
 
-@blue-light:			#8AE8FF;
-@light-blue:			#8AE8FF;
+@blue-light:			#8AE8FF; // #12b4d3;
+@light-blue:			#8AE8FF; // #12b4d3;
 
 @green:                 #46a546;
-@green-light:			#C1C93D;
-@light-green:			#C1C93D;
+@green-light:			#C1C93D; // #abc033;
+@light-green:			#C1C93D; // #abc033;
 
 @red:                   rgb(250, 10, 10);
 @orange:                #f75400;
-@yellow:                #F4E359;
+@yellow:                #F4E359; //#e3e229; 
 
 @pink:                	#ff78a2; //#ff9ba1;
 @purple:                #7a43b6;
@@ -44,12 +44,14 @@
 @instagram-color:		#46739A;
 @tumblr-color:			#395875;
 
+
 // Polarity Colors
 // ----------------------------------------------------------------------------------------------
 
-@positive-color:		#18b4c6; 
+@positive-color:		#3dcff5; 
 @neutral-color:			#3f303b;
-@negative-color:		rgb(179, 9, 20);  
+@negative-color:		#df5b14;  
+
 
 // Grays
 // ----------------------------------------------------------------------------------------------
@@ -60,14 +62,16 @@
 @gray-light:             lighten(@black, 82.6%);   // #999
 @gray-lighter:           lighten(@black, 93.5%);   // #eee
 
+
 // Brand colors
 // ----------------------------------------------------------------------------------------------
 
-@brand-primary:         @orange;
-@brand-success:         @cyan;
-@brand-warning:         darken(mix(@yellow, @orange, 80), 30);
+@brand-primary:         @orange; // #428bca;
+@brand-success:         @positive-color;
+@brand-warning:         darken(@facebook-color, 15);
 @brand-danger:          @negative-color;
-@brand-info:            darken(mix(saturate(@blue, 20), @purple, 60), 5);
+@brand-info:            @purple;
+
 
 // Scaffolding
 // ----------------------------------------------------------------------------------------------
@@ -75,11 +79,13 @@
 @body-bg:               #fff;
 @text-color:            @gray-dark;
 
+
 // Links
 // ----------------------------------------------------------------------------------------------
 
 @link-color:            @brand-primary;
 @link-hover-color:      lighten(@link-color, 15%);
+
 
 // Typography
 // ----------------------------------------------------------------------------------------------
@@ -114,12 +120,13 @@
 // ----------------------------------------------------------------------------------------------
 
 @border-color:			@gray-light;
-@default-shadow:		0 1px 3px rgba(0, 0, 0, .3);
+@default-shadow:		0 1px 3px rgba(0, 0, 0, .1);
 @table-border: 			1px solid @table-border-color;
 
 @padding-small:			2px;
 @padding-medium:		8px;
 @padding-large:			15px;
+
 
 // Components
 // ----------------------------------------------------------------------------------------------
@@ -137,14 +144,15 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
+@border-radius-small:            4px;
 @border-radius-base:             4px;
 @border-radius-large:            4px;
-@border-radius-small:            4px;
 
 @component-active-bg:            @brand-primary;
 
 @caret-width-base:               4px;
 @caret-width-large:              5px;
+
 
 // Tables
 // ----------------------------------------------------------------------------------------------
@@ -158,6 +166,7 @@
 @table-bg-active:                    @table-bg-hover;
 
 @table-border-color:                 fade(@black, 10); // table and cell border
+
 
 // Buttons
 // ----------------------------------------------------------------------------------------------
@@ -638,8 +647,8 @@
 @code-color:                  #c7254e;
 @code-bg:                     #f9f2f4;
 
-@pre-bg:                      @pizarra;
-@pre-color:                   @white;
+@pre-bg:                      #f5f5f5;
+@pre-color:                   @gray-dark;
 @pre-border-color:            #ccc;
 @pre-scrollable-max-height:   340px;
 
@@ -651,7 +660,7 @@
 @headings-small-color:        @gray-light;
 @blockquote-small-color:      @gray-light;
 @blockquote-border-color:     @gray-lighter;
-@page-header-border-color:    transparent;
+@page-header-border-color:    @gray-lighter;
 
 // Miscellaneous
 // ----------------------------------------------------------------------------------------------

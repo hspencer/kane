@@ -89,7 +89,7 @@ p.hint{
 .blob{
 	border: 5px solid fade(@black, 10);
 	padding: @font-size-base;
-	.border-radius(@border-radius-large*2);
+	.border-radius(@border-radius-large * 2);
 	margin: @font-size-base 0;
 	min-height: 320px;
 
@@ -254,7 +254,7 @@ p.hint{
 		&.true{color: fade(@black, 70%);}
 		&.false{color: fade(@black, 30%);}
 	}
-
+	/*
 	.polarity{
 		&.positive,
 		&.negative,
@@ -262,7 +262,7 @@ p.hint{
 			background-color: transparent;
 		}
 	}
-
+	*/
 	.audit{
 		cursor: pointer;
 		background-image: url('@{images-path}ns.png');
@@ -284,21 +284,21 @@ p.hint{
 			}
 
 			&.positive{
-				color: white;
-				text-shadow: -1px -1px 0 fade(@black, 30);
-				.buttonBackground(lighten(@positive-color, 30), @positive-color);
+				color: contrast(@positive-color, @black, @white, 43%);
+				background-color: @positive-color;
+				&:hover{background-color: lighten(@positive-color, 11)}
 			}
 
 			&.negative{
-				color: white;
-				text-shadow: -1px -1px 0 fade(@black, 30);
-				.buttonBackground(lighten(@negative-color, 30), @negative-color);
+				color: contrast(@negative-color, @black, @white, 43%);
+				background-color: @negative-color;
+				&:hover{background-color: lighten(@negative-color, 11)}
 			}
 
 			&.neutral{
-				color: @black;
-				text-shadow: 1px -px 0 fade(@white, 30);
-				.buttonBackground(lighten(@neutral-color, 30), @neutral-color);
+				color: contrast(@neutral-color, @black, @white, 43%);
+				background-color: @neutral-color;
+				&:hover{background-color: lighten(@neutral-color, 11)}
 			}
 
 			&.delete{
@@ -307,7 +307,6 @@ p.hint{
 		}		
 
 		.audit-label{
-			font-size: 12px;
 			color: fade(@white, 40);
 			margin: 0 1em 0 2em;
 		}
