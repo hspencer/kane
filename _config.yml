@@ -5,7 +5,7 @@ destination: _site
 lsi: false
 markdown: rdiscount
 
-baseurl: http://citisent.github.io/kane
+baseurl: http://hspencer.github.io/kane
 
 pygments: true
 permalink: pretty
